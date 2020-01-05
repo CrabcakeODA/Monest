@@ -9,11 +9,10 @@ export const getPageData = () => {
   return dispatch => {
     dispatch({ type: GET_PAGE_DATA_START });
     axios
-      .post(
+      .get(
         "http://159.89.121.159:3001/somo/contentByApp?page=0&size=100&appName=uma"
       )
       .then(({ data }) => {
-        console.log(data);
         if (data.result) {
           dispatch({ type: GET_PAGE_DATA_SUCCESS, payload: data.user });
         } else {

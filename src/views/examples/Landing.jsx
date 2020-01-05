@@ -42,12 +42,13 @@ import CardsFooter from "components/Footers/CardsFooter.jsx";
 
 // index page sections
 import Download from "../IndexSections/Download.jsx";
-import getPageData from "../../actions/data";
+import { getPageData } from "../../actions/data";
 
 class Landing extends React.Component {
   state = {};
 
   componentDidMount() {
+    this.props.getPageData();
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
