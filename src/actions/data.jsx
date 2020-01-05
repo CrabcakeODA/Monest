@@ -10,7 +10,8 @@ export const getPageData = () => {
     dispatch({ type: GET_PAGE_DATA_START });
     axios
       .get(
-        "http://159.89.121.159:3001/somo/contentByApp?page=0&size=100&appName=uma"
+        //RESTApi
+        ""
       )
       .then(({ data }) => {
         if (data.result) {
