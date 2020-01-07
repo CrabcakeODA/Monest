@@ -27,7 +27,7 @@ import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss";
 
-import Landing from "views/examples/Landing.jsx";
+import Home from "views/pages/Home.jsx";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
@@ -39,7 +39,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact render={props => <Landing {...props} />} />
+        <Route path="/" exact render={props => <Home {...props} />} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>

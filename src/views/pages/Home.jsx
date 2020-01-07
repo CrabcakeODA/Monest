@@ -37,14 +37,14 @@ import {
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
+import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
 import CardsFooter from "components/Footers/CardsFooter.jsx";
 
 // index page sections
 import Download from "../IndexSections/Download.jsx";
 import { getPageData } from "../../actions/data";
 
-class Landing extends React.Component {
+class Home extends React.Component {
 
   constructor(props) {
     super(props);
@@ -63,7 +63,7 @@ class Landing extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        <HeaderNavbar />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
@@ -889,4 +889,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Landing);
+)(Home);
