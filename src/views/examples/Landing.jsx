@@ -45,7 +45,13 @@ import Download from "../IndexSections/Download.jsx";
 import { getPageData } from "../../actions/data";
 
 class Landing extends React.Component {
-  state = {};
+
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
 
   componentDidMount() {
     this.props.getPageData();
@@ -53,6 +59,7 @@ class Landing extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+
   render() {
     return (
       <>

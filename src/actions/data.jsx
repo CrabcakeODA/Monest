@@ -10,18 +10,18 @@ export const getPageData = () => {
     dispatch({ type: GET_PAGE_DATA_START });
     axios
       .get(
-        //RESTApi
+        //RestApi
         ""
       )
       .then(({ data }) => {
-        if (data.result) {
-          dispatch({ type: GET_PAGE_DATA_SUCCESS, payload: data.user });
+        if (data !== null) {
+          dispatch({ type: GET_PAGE_DATA_SUCCESS, payload: data.data });
         } else {
-          dispatch({ type: GET_PAGE_DATA_FAIL, payload: data.error });
+          console.log("Loading data ...")
         }
       })
-      .catch(function(error) {
-        dispatch({ type: GET_PAGE_DATA_FAIL, payload: error.message });
+      .catch(function(data) {
+        dispatch({ type: GET_PAGE_DATA_FAIL, payload: data.message });
       });
   };
 };

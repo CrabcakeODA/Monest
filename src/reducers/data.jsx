@@ -10,14 +10,14 @@ export default (state = INIT_STATE, action) => {
   switch (action.type) {
     case GET_PAGE_DATA_START: {
       return {
-        ...state,
-        pageData: action.payload
+        ...state
       };
     }
 
     case GET_PAGE_DATA_SUCCESS: {
       return {
-        ...state
+        ...state,
+        pageData: action.payload
       };
     }
 
