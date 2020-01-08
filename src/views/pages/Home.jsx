@@ -15,12 +15,17 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 import { connect } from "react-redux";
 import classnames from "classnames";
 
 // reactstrap components
 import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
   Badge,
   Button,
   Card,
@@ -38,18 +43,43 @@ import {
 
 // core components
 import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
-import CardsFooter from "components/Footers/CardsFooter.jsx";
+import SimpleFooter from "components/Footers/SimpleFooter.jsx";
 
 // index page sections
-import Download from "../IndexSections/Download.jsx";
 import { getPageData } from "../../actions/data";
+
+import styled from 'styled-components'
+
+const items = [
+  {
+    src: "assets/img/bg/bg-1.jpeg",
+    altText: 'bg-1.jpeg',
+    caption: 'Slide 1'
+  },
+  {
+    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
+    altText: 'bg-2.jpeg',
+    caption: 'Slide 2'
+  },
+  {
+    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
+    altText: 'bg-3.jpeg',
+    caption: 'Slide 3'
+  }
+];
+
+const CarsouelImg = styled.img`
+  width: 100vw;
+  max-height: 100vh;
+`
 
 class Home extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-
+      activeIndex: 0,
+      animating: false,
     };
   }
 
@@ -60,13 +90,97 @@ class Home extends React.Component {
     this.refs.main.scrollTop = 0;
   }
 
+  nextCarouselPage = () => {
+    if (!this.state.animating) {
+      let nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+      this.setState({
+        activeIndex: nextIndex
+      })
+    }
+  }
+
+  previousCarouselPage = () => {
+    if (!this.state.animating) {
+      let nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+      this.setState({
+        activeIndex: nextIndex
+      })
+    }
+  }
+
+  goToCarouselPage = (newIndex) => {
+    if (!this.state.animating) {
+      this.setState({
+        activeIndex: newIndex
+      })
+    }
+  }
+
+  setAnimatingStatus = (animatingStatus) => {
+    this.setState({ animating: animatingStatus })
+  }
+
   render() {
+    let slides = items.map((item) =>
+      <CarouselItem
+        onExiting={() => this.setAnimatingStatus(true)}
+        onExited={() => this.setAnimatingStatus(false)}
+        key={item.src}
+      >
+        <CarsouelImg width='100%' height='80%' src={require(`assets/img/bg/${item.altText}`)} alt={item.altText} />
+        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+      </CarouselItem>
+    );
+
     return (
       <>
-        <HeaderNavbar />
         <main ref="main">
           <div className="position-relative">
-            {/* shape Hero */}
+            <section className="section p-0">
+              <HeaderNavbar />
+              <div className="">
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+              </div>
+              <Container className="d-flex p-0 m-0">
+                <div className="p-0 m-0">
+                      <Carousel
+                        activeIndex={this.state.activeIndex}
+                        next={this.nextCarouselPage}
+                        previous={this.previousCarouselPage}
+                      >
+                        <CarouselIndicators items={items} activeIndex={this.state.activeIndex} onClickHandler={this.goToCarouselPage} />
+                        {slides}
+                        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previousCarouselPage} />
+                        <CarouselControl direction="next" directionText="Next" onClickHandler={this.nextCarouselPage} />
+                      </Carousel>
+                </div>
+              </Container>
+              {/* SVG separator */}
+              <div className="separator separator-bottom separator-skew">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                  version="1.1"
+                  viewBox="0 0 2560 100"
+                  x="0"
+                  y="0"
+                >
+                  <polygon
+                    className="fill-white"
+                    points=""
+                  />
+                </svg>
+              </div>
+            </section>
+
             <section className="section section-lg section-shaped pb-250">
               <div className="shape shape-style-1 shape-default">
                 <span />
@@ -509,221 +623,230 @@ class Home extends React.Component {
               </svg>
             </div>
           </section>
-          <section className="section section-lg">
+          <section className="section section-lg py-5">
             <Container>
-              <Row className="justify-content-center text-center mb-lg">
+              <Row className="justify-content-center text-center mb-sm">
                 <Col lg="8">
-                  <h2 className="display-3">The amazing Team</h2>
-                  <p className="lead text-muted">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record maximum.
-                  </p>
+                  <h2 className="display-3">Our partners</h2>
                 </Col>
               </Row>
               <Row>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
                     <img
                       alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
+                      className="img-center"
+                      src={require("assets/img/partner/TDBank.png")}
                       style={{ width: "200px" }}
                     />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Ryan Tompson</span>
-                        <small className="h6 text-muted">Web Developer</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="warning"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="warning"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="warning"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
                   </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
                     <img
                       alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-2-800x800.jpg")}
+                      className="img-center"
+                      src={require("assets/img/partner/Scotiabank.png")}
                       style={{ width: "200px" }}
                     />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Romina Hadid</span>
-                        <small className="h6 text-muted">
-                          Marketing Strategist
-                        </small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
                   </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
                     <img
                       alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
+                      className="img-center"
+                      src={require("assets/img/partner/Manulife.png")}
                       style={{ width: "200px" }}
                     />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Alexander Smith</span>
-                        <small className="h6 text-muted">UI/UX Designer</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
                   </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
                     <img
                       alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-4-800x800.jpg")}
+                      className="img-center"
+                      src={require("assets/img/partner/BankOfChina.png")}
                       style={{ width: "200px" }}
                     />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">John Doe</span>
-                        <small className="h6 text-muted">Founder and CEO</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="success"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="success"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="success"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/HSBC.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/StreetCapital.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/HomeTrust.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/B2BBank.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/EQBank.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/ICSaving.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/FirstNationalFinancial.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/Merix.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/MarathonMortgageCorp.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/Lendwise.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/MCAP.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/AlternaBank.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/CMLS.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/CommunityTrust.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/DUCA.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/Meridian.png")}
+                      style={{ width: "200px" }}
+                    />
+                  </div>
+                </Col>
+                <Col className="px-0 mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-0 mb-3">
+                    <img
+                      alt="..."
+                      className="img-center"
+                      src={require("assets/img/partner/HomeEquityBank.png")}
+                      style={{ width: "200px" }}
+                    />
                   </div>
                 </Col>
               </Row>
-            </Container>
-          </section>
-          <section className="section section-lg pt-0">
-            <Container>
-              <Card className="bg-gradient-warning shadow-lg border-0">
-                <div className="p-5">
-                  <Row className="align-items-center">
-                    <Col lg="8">
-                      <h3 className="text-white">
-                        We made website building easier for you.
-                      </h3>
-                      <p className="lead text-white mt-3">
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture.
-                      </p>
-                    </Col>
-                    <Col className="ml-lg-auto" lg="3">
-                      <Button
-                        block
-                        className="btn-white"
-                        color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                      >
-                        Download React
-                      </Button>
-                    </Col>
-                  </Row>
-                </div>
-              </Card>
+              <Row className="justify-content-end text-right mb-sm">
+                <Col>
+                  <h6>Centum Monest Mortgage Inc. License: #12289</h6>
+                </Col>
+              </Row>
             </Container>
           </section>
           <section className="section section-lg bg-gradient-default">
@@ -864,9 +987,8 @@ class Home extends React.Component {
               </Row>
             </Container>
           </section>
-          <Download />
         </main>
-        <CardsFooter />
+        <SimpleFooter />
       </>
     );
   }
