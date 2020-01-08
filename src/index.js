@@ -29,6 +29,9 @@ import "assets/scss/argon-design-system-react.scss";
 
 import Home from "views/pages/Home.jsx";
 import About from "views/pages/About/About.jsx"
+import Calculator from "views/pages/Calculator/Calculator.jsx"
+import Contact from "views/pages/Contact/Contact.jsx"
+import Mortgage from "views/pages/Mortgage/Mortgage.jsx"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
@@ -42,6 +45,9 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact render={props => <Home {...props} />} />
         <Route path="/about" exact render={props => <About {...props} />} />
+        <Route path="/Calculator" exact render={props => <Calculator {...props} />} />
+        <Route path="/Contact" exact render={props => <Contact {...props} />} />
+        <Route path="/Mortage" exact render={props => <Mortgage {...props} />} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>
