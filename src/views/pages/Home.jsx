@@ -182,6 +182,57 @@ class Home extends React.Component {
               </div>
             </section>
 
+            <section className="section section-lg">
+              <Container>
+                <Row className="justify-content-center text-center mb-lg">
+                  <Col lg="8">
+                    <h2 className="display-3">Start an application</h2>
+                    <p className="lead text-muted">
+                      lowest rate and the most professional service served by Monest
+                    </p>
+                  </Col>
+                </Row>
+                <Row className="mb-5">
+                <Col className="mb-5 mb-lg-0" lg="4" md="6">
+                    <div className="px-4 card-profile-image">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="Purchase"
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={require("assets/img/theme/team-1-800x800.jpg")}
+                        style={{ width: "200px" }}
+                      />
+                      </a>
+                    </div>
+                  </Col>
+                  <Col className="mb-5 mb-lg-0" lg="4" md="6">
+                    <div className="px-4 card-profile-image">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={require("assets/img/theme/team-1-800x800.jpg")}
+                        style={{ width: "200px" }}
+                      />
+                      </a>
+                    </div>
+                  </Col>
+                  <Col className="mb-5 mb-lg-0" lg="4" md="6">
+                    <div className="px-4 card-profile-image">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={require("assets/img/theme/team-1-800x800.jpg")}
+                        style={{ width: "200px" }}
+                      />
+                      </a>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </section>
+
             <section className="section section-lg section-shaped pb-250">
               <div className="shape shape-style-1 shape-default">
                 <span />
