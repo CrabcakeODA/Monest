@@ -47,7 +47,8 @@ ReactDOM.render(
         <Route path="/about" exact render={props => <About {...props} />} />
         <Route path="/Calculator" exact render={props => <Calculator {...props} />} />
         <Route path="/Contact" exact render={props => <Contact {...props} />} />
-        <Route path="/Mortage" exact render={props => <Mortgage {...props} />} />
+        <Route path="/Mortgage" exact render={props => <Mortgage {...props} />} />
+        <Route path="/Contact" exact render={props => <Contact {...props} />} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>

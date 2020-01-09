@@ -1,23 +1,19 @@
-.Header-and-Feature{
+.header-and-feature{
     width: 100%;
     height: 260px;
     background-image: url(./background.jpg);
 
-    .Main-Title{
+    .h1{
         color: seashell;
         font-size: 3rem;
+        text-align: center;
+        padding-top: 150px;
     }
 }
-.Main-Title{
-    text-align: center;
-    padding-top: 150px;
-}
-.Main-Container{
-    .Card{
-        margin: 5%;
-    }
-    .First-Row{
-        margin-top:5%;
-    }
 
+.h2{
+    color: rgb(42, 71, 65);
+    font-size: 2.2rem;
+    margin-top: 1%;
 }
+
