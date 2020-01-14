@@ -74,7 +74,7 @@ import {
                                 <Card  style={{ width: '25rem' }}>                           
                                     <CardBody>
                                     <CardTitle>加拿大 华旗金融办事处</CardTitle>
-                                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                                    <CardText>Unit #1008, 250 Consumers Road.</CardText>
                                     </CardBody>
                                 </Card>
                                 <br></br>
