@@ -1,59 +1,36 @@
-/*!
 
-=========================================================
-* Argon Design System React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
-// JavaScript plugin that hides or shows a component based on your scroll
-// import Headroom from "headroom.js";
-// reactstrap components
+import i18next from 'i18next';
+import { withNamespaces } from 'react-i18next';
 import {
-  // Button,
-  UncontrolledCollapse,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle,
-  UncontrolledDropdown,
-  // Media,
-  NavbarBrand,
   Navbar,
-  // NavItem,
-  // NavLink,
   Nav,
   Container,
+  NavbarBrand,
+  UncontrolledCollapse,
   Row,
   Col,
-  // UncontrolledTooltip
-} from "reactstrap";
-
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
+// import { Image } from 'react-bootstrap';
 import "scss/HeaderNavbar.scss";
 
 class HeaderNavbar extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      isOpen:false,
-      isOpenMortgage: false,
-      isOpenCalculator: false,
-      isOpenAbout: false,
-    }
+    };
   }
 
+  handleClick(lang) {
+    i18next.changeLanguage(lang);
+  }
   render() {
+    const { t } = this.props;
     return (
       <>
         <header className="header-global">
@@ -62,7 +39,7 @@ class HeaderNavbar extends React.Component {
             expand="lg"
             id="navbar-main"
           >
-            <Container>
+            <Container className="navContainer">
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
                   alt="Logo Imgae"
@@ -96,118 +73,95 @@ class HeaderNavbar extends React.Component {
                 
                 <Nav className=" menu navbar-nav-hover align-items-lg-center" navbar>
                   <div className="menu-nav">
-                    <Link to="/" className="menu-item nav-link-inner--text">Home</Link>
+                    <Link to="/" className="nav-link-inner--text link-item">{t('Home')}</Link>
                   </div>
 
-                {/* mortgage  */}
-                <div className="menu-nav">
-                <Link to="/mortgage" className=" menu-item nav-link-inner--text">Mortgage</Link>
-                <UncontrolledDropdown nav className="mobile-dropdown">
-                    <DropdownToggle nav>
-                      <span className="btn-icon btn btn-primary" onClick={()=>this.setState({ isOpenMortgage: !this.state.isOpenMortgage, isOpen:this.state.isOpen  })}>
-                        { 
-                          this.state.isOpenMortgage ? <i className="fa fa-minus" /> : <i className="fa fa-plus" />
-                          // this.state.isOpen ? <i className="fa fa-minus" /> : <i className="fa fa-plus" />
-                        }
-                      </span>
-                    </DropdownToggle>
-                    <DropdownMenu className="mobile-dropdown-menu">
-                      <DropdownItem to="/mortgage/first-time-home-buyer" tag={Link}>
-                      First-Time Home Buyer
-                      </DropdownItem>
-                      <DropdownItem to="/mortgage/investment-properties" tag={Link}>
-                      Investment Properties
-                      </DropdownItem>
-                      <DropdownItem to="/mortgage/new-to-Canada" tag={Link}>
-                      New to Canada
-                      </DropdownItem>
-                      <DropdownItem to="/mortgage/low-income-education-centre" tag={Link}>
-                      Low income Education Centre
-                      </DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledDropdown>
-                  </div>
-
-                  {/* Calculator  */}
+                  {/* mortgage  */}
                   <div className="menu-nav">
-                  <Link to="/calculator" className="menu-item nav-link-inner--text">Calculator</Link>
-                  <UncontrolledDropdown nav className="mobile-dropdown">
-                    <DropdownToggle nav>
-                      <span className="btn-icon btn btn-primary" onClick={()=>this.setState({ isOpenCalculator: !this.state.isOpenCalculator })}>
-                        { 
-                          this.state.isOpenCalculator ? <i className="fa fa-minus" /> : <i className="fa fa-plus" />
-                        }
-                      </span>
-                    </DropdownToggle>
-                    <DropdownMenu className="mobile-dropdown-menu">
-                      <DropdownItem to="/calculator/mortgage-affordability-calculator" tag={Link}>
-                      Mortgage Affordability Calculator
-                      </DropdownItem>
-                      <DropdownItem to="/calculator/mortgage-payment-calculator" tag={Link}>
-                      Mortgage Payment Calculator
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                    <UncontrolledDropdown nav>
+                      <Link to="/mortgage" className="nav-link-inner--text link-item">{t('Mortgage')}</Link>
+                      <DropdownToggle split id="dropdown-split-basic" className="caret-button" />
+                      <DropdownMenu>
+                        <DropdownItem to="/mortgage/first-time-home-buyer" tag={Link}>
+                        {t('First-Time Home Buyer')}
+                        </DropdownItem>
+                        <DropdownItem to="/mortgage/investment-properties" tag={Link}>
+                        {t('Investment Properties')}
+                        </DropdownItem>
+                        <DropdownItem to="/mortgage/new-to-Canada" tag={Link}>
+                        {t('New to Canada')}
+                        </DropdownItem>
+                        <DropdownItem to="/mortgage/low-income-education-centre" tag={Link}>
+                        {t('Low income Education Centre')}
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </UncontrolledDropdown>
+                  </div>
+                    
+                    {/* Calculator  */}
+                  <div className="menu-nav">
+                    <UncontrolledDropdown nav>
+                      <Link to="/calculator" className="nav-link-inner--text link-item">{t('Calculator')}</Link>
+                      <DropdownToggle split id="dropdown-split-basic" className="caret-button"/>
+                      <DropdownMenu>
+                        <DropdownItem to="/calculator/mortgage-affordability-calculator" tag={Link}>
+                        {t('Mortgage Affordability Calculator')}
+                        </DropdownItem>
+                        <DropdownItem to="/calculator/mortgage-payment-calculator" tag={Link}>
+                        {t('Mortgage Payment Calculator')}
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </UncontrolledDropdown>
                   </div>
 
                   {/* About */}
                   <div className="menu-nav">
-                  <Link to="/about" className="menu-item nav-link-inner--text">About</Link>
-                  <UncontrolledDropdown nav className="mobile-dropdown">             
-                    <DropdownToggle nav>
-                    <span className="btn-icon btn btn-primary" 
-                      onClick={
-                        ()=>this.setState({ isOpenAbout: !this.state.isOpenAbout })
-                      }>
-
-                        { 
-                          this.state.isOpenAbout 
-                          ? <i className="fa fa-minus" /> 
-                          : <i className="fa fa-plus" />
-                        }
-
-                      </span>
-                    </DropdownToggle>
-                    <DropdownMenu className="mobile-dropdown-menu">
-                      <DropdownItem to="/mortgage/first-time-home-buyer" tag={Link}>
-                      Our Story
+                    <UncontrolledDropdown nav>
+                    <Link to="/about" className="nav-link-inner--text link-item">{t('About')}</Link>
+                    <DropdownToggle split id="dropdown-split-basic" className="caret-button"/>
+                    <DropdownMenu className="aboutDropdown">
+                      <DropdownItem to="/about/our-story" tag={Link}>
+                        {t('Our Story')}
                       </DropdownItem>
-                      <DropdownItem to="/mortgage/investment-properties" tag={Link}>
-                      Agents
+                      <DropdownItem to="/about/agent" tag={Link}>
+                        {t('Agents')}
                       </DropdownItem>
-                      <DropdownItem to="/mortgage/new-to-Canada" tag={Link}>
-                      Referral Program
+                      <DropdownItem to="/about/referral-program" tag={Link}>
+                        {t('Referral Program')}
                       </DropdownItem>
-                      <DropdownItem to="/mortgage/low-income-education-centre" tag={Link}>
-                      Mortgage Insight
+                      <DropdownItem to="/about/mortgage-insight" tag={Link}>
+                        {t('Mortgage Insight')}
                       </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                      <DropdownItem to="/about/mortgage-article" tag={Link}>
+                        {t('Mortgage Article')}
+                      </DropdownItem>
+                      <DropdownItem to="/about/mortgage-news" tag={Link}>
+                        {t('Mortgage News')}
+                      </DropdownItem>
+                      </DropdownMenu>
+                    </UncontrolledDropdown>
                   </div>
 
                   {/* Contact */}
                   <div className="menu-nav">
-                    <Link to="/contact" className="menu-item nav-link-inner--text">Contact</Link>
+                    <Link to="/contact" className="nav-link-inner--text link-item">{t('Contact')}</Link>
                   </div>
 
-                  {/* 中文 */}
-                  <div className="menu-nav">
-                  <i className="fa fa-minus" />
-                  </div>
-
-                  {/* English */}
-                  <div className="menu-nav">
-                  <i className="fa fa-minus" />
+                  {/* language */}
+                  <div className="menu-nav flag">
+                    {/* 中文 */}
+                    <img className="zh-flag" onClick={() => this.handleClick('zh')} alt="English" src={require("assets/img/flag/chinese.png")} />
+                    {/* English */}
+                    <img className="en-flag" onClick={() => this.handleClick('en')} alt="English" src={require("assets/img/flag/english.png")} />
                   </div>
                 </Nav>
               </UncontrolledCollapse>
             </Container>
-          </Navbar>
+          </Navbar> 
         </header>
-        </>
-      
+      </>  
     );
   }
 }
 
-export default HeaderNavbar;
+export default withNamespaces()(HeaderNavbar);

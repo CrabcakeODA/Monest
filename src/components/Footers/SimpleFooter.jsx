@@ -1,154 +1,150 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React from "react";
-// reactstrap components
+import { Link } from "react-router-dom";
+import { withNamespaces } from 'react-i18next';
 import {
   Button,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
   Col,
+  ListGroup,
+  ListGroupItem,
   UncontrolledTooltip
 } from "reactstrap";
+import "scss/SimpleFooter.scss";
 
 class SimpleFooter extends React.Component {
   render() {
+    const { t } = this.props;
     return (
       <>
-        <footer className=" footer">
-          <Container>
-            <Row className=" row-grid align-items-center mb-5">
-              <Col lg="6">
-                <h3 className=" text-primary font-weight-light mb-2">
-                  Thank you for supporting us!
-                </h3>
-                <h4 className=" mb-0 font-weight-light">
-                  Let's get in touch on any of these platforms.
-                </h4>
+        <footer className="footer">
+          <Container className="footerContainer">
+            {/* sitmap list */}
+            <Row className=" row-grid align-items-center mb-5 top">
+              <Col lg="9" className="sitemap">
+                <Row>
+                  <Col md="2" className="sitemap-list">
+                    <ListGroup className="monest-footer footer-list">
+                      <ListGroupItem className="list-title"><Link to="/">{t('Monest')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about/our-story">{t('Our Story')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about/agent">{t('Agents')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/contact">{t('Contact')}</Link></ListGroupItem>
+                    </ListGroup>
+                  </Col>
+                  <Col md="4" className="sitemap-list">
+                    <ListGroup className="mortgage-footer footer-list">
+                      <ListGroupItem className="list-title"><Link to="/mortgage">{t('Mortgage')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/mortgage/first-time-home-buyer">{t('First-Time Home Buyer')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/mortgage/investment-properties">{t('Investment Properties')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/mortgage/new-to-Canada">{t('New to Canada')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/mortgage/low-income-education-centre">{t('Low income Education Centre')}</Link></ListGroupItem>
+                    </ListGroup>
+                  </Col>
+                  <Col md="4" className="sitemap-list">
+                    <ListGroup className="calculator-footer footer-list">
+                      <ListGroupItem className="list-title"><Link to="/calculator">{t('Calculator')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/calculator/mortgage-affordability-calculator">{t('Mortgage Affordability Calculator')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/calculator/mortgage-payment-calculator">{t('Mortgage Payment Calculator')}</Link></ListGroupItem>
+                    </ListGroup>
+                  </Col>
+                  <Col md="2" className="sitemap-list">
+                    <ListGroup className="about-footer footer-list">
+                      <ListGroupItem className="list-title"><Link to="/about">{t('About')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about/referral-program">{t('Referral Program')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about/mortgage-insight">{t('Mortgage Insight')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about/mortgage-article">{t('Mortgage Article')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about/mortgage-news">{t('Mortgage News')}</Link></ListGroupItem>
+                    </ListGroup>
+                  </Col>
+                </Row>
               </Col>
-              <Col className=" text-lg-center btn-wrapper" lg="6">
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round"
-                  color="twitter"
-                  href="https://twitter.com/creativetim"
-                  id="tooltip126536702"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-twitter" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip126536702">
-                  Follow us
-                </UncontrolledTooltip>
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round ml-1"
-                  color="facebook"
-                  href="https://www.facebook.com/creativetim"
-                  id="tooltip383967593"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-facebook-square" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip383967593">
-                  Like us
-                </UncontrolledTooltip>
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round ml-1"
-                  color="dribbble"
-                  href="https://dribbble.com/creativetim"
-                  id="tooltip568564532"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-dribbble" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip568564532">
-                  Follow us
-                </UncontrolledTooltip>
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round ml-1"
-                  color="github"
-                  href="https://github.com/creativetimofficial"
-                  id="tooltip626177562"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-github" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip626177562">
-                  Star on Github
-                </UncontrolledTooltip>
+
+              {/* media */}
+              <Col className="text-lg-center btn-wrapper media-container" lg="3">
+                <div className="media-total">
+                  <div className="media-part">
+                    <Button
+                      className=" btn-neutral btn-icon-only btn-round"
+                      color="instagram"
+                      href="https://www.instagram.com/monest_mortgage/"
+                      id="tooltip126536702"
+                      size="lg"
+                      target="_blank"
+                    >
+                      <i className=" fa fa-instagram" />
+                    </Button>
+                    <UncontrolledTooltip delay={0} target="tooltip126536702">
+                      Follow us
+                    </UncontrolledTooltip>
+                    <Button
+                      className=" btn-neutral btn-icon-only btn-round ml-1"
+                      color="facebook"
+                      href="https://www.facebook.com/MonestMortgage/?modal=admin_todo_tour"
+                      id="tooltip383967593"
+                      size="lg"
+                      target="_blank"
+                    >
+                      <i className=" fa fa-facebook-square" />
+                    </Button>
+                    <UncontrolledTooltip delay={0} target="tooltip383967593">
+                      Like us
+                    </UncontrolledTooltip>
+                    <Button
+                      className=" btn-neutral btn-icon-only btn-round ml-1 linkedin-icon"
+                      href="#"
+                      id="tooltip568564532"
+                      size="lg"
+                      target="_blank"
+                    >
+                      <i className=" fa fa-linkedin" />
+                    </Button>
+                    <UncontrolledTooltip delay={0} target="tooltip568564532">
+                      Follow us
+                    </UncontrolledTooltip>
+                  </div>
+                  <div className="media-part media-bottom">
+                    <Button
+                      className=" btn-neutral btn-icon-only btn-round ml-1 youtube-icon"
+                      href="#"
+                      id="tooltip626177562"
+                      size="lg"
+                      target="_blank"
+                    >
+                      <i className=" fa fa-youtube-play" />
+                    </Button>
+                    <UncontrolledTooltip delay={0} target="tooltip626177562">
+                      Follow us
+                    </UncontrolledTooltip>
+
+                    <Button
+                      className=" btn-neutral btn-icon-only btn-round ml-1 pinterest-icon"
+                      href="#"
+                      id="tooltip626177562"
+                      size="lg"
+                      target="_blank"
+                    >
+                      <i className=" fa fa-pinterest" />
+                    </Button>
+                    <UncontrolledTooltip delay={0} target="tooltip626177562">
+                      Follow us
+                    </UncontrolledTooltip>
+                  </div>
+                </div>
+
+                {/* call number */}
+                <div className="call">Call: 416-855-4565 </div>
               </Col>
             </Row>
             <hr />
+            
+            {/* copyright */}
             <Row className=" align-items-center justify-content-md-between">
-              <Col md="6">
+              <Col>
                 <div className=" copyright">
                   © {new Date().getFullYear()}{" "}
-                  <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
-                    target="_blank"
-                  >
-                    Creative Tim
-                  </a>
-                  .
+                Monest
                 </div>
-              </Col>
-              <Col md="6">
-                <Nav className=" nav-footer justify-content-end">
-                  <NavItem>
-                    <NavLink
-                      href="https://www.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      Creative Tim
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      About Us
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="http://blog.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      Blog
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
-                      target="_blank"
-                    >
-                      MIT License
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </Col>
+              </Col>   
             </Row>
           </Container>
         </footer>
@@ -157,4 +153,4 @@ class SimpleFooter extends React.Component {
   }
 }
 
-export default SimpleFooter;
+export default withNamespaces()(SimpleFooter);
