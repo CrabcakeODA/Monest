@@ -24,14 +24,13 @@ import MortgageAffordabilityCalculator from "views/pages/Calculator/MortgageAffo
 import MortgagePaymentCalculator from "views/pages/Calculator/MortgagePaymentCalculator.jsx"
 
 import About from "views/pages/About/About.jsx"
+import Contact from "views/pages/Contact/Contact.jsx"
 import OurStory from "views/pages/About/OurStory.jsx"
 import Agents from "views/pages/About/Agents.jsx"
 import ReferralProgram from "views/pages/About/ReferralProgram.jsx"
 import MortgageInsight from "views/pages/About/MortgageInsight.jsx"
 import MortgageArticle from "views/pages/About/MortgageArticle.jsx"
 import MortgageNews from "views/pages/About/MortgageNews.jsx"
-
-import Contact from "views/pages/Contact/Contact.jsx"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
