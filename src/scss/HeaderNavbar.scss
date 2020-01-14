@@ -1,0 +1,68 @@
+.header-global{
+    background-color: cornflowerblue;
+    height: 100%;
+
+    .navContainer{
+        .menu-nav{
+            padding: 10px 0;
+            .caret-button{
+                display: none;
+                padding: 0;
+                width: 20px;
+                margin-left: 5px;
+                background-color: #fff;
+                border: none;
+                box-shadow: none;
+            }
+            .btn:focus,
+            .btn:hover{
+                box-shadow: none;
+            }
+        }
+
+        .flag{
+            .zh-flag, .en-flag{
+                width: 23px;
+                height: 16px;
+                margin-bottom: 4px;
+            }
+            .en-flag{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .caret-button{
+        display: inline-block!important;
+    }
+}   
+
+@media screen and (min-width: 769px){
+    .menu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        float: right;
+        .menu-nav{
+            margin-right: 20px;
+            float: right;
+            .nav-item{
+                margin-right: 0!important;
+            }
+            .link-item{
+                color: #fff;
+            }
+            .dropdown-menu{
+                top: 150%;
+            }
+            .aboutDropdown{
+                left:-30%;
+            }
+        }
+        .flag{
+            margin-right: 0;
+        }
+    }
+}
