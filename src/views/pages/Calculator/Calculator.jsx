@@ -38,8 +38,8 @@ export default class Calculator extends Component
                         </Row>
                         <br></br>
                         <Row className = "second-row">
-                            <Col className = "mortgage-affordability-calculator">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "mortgage-affordability-calculator">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Mortgage Affordability Calculator</CardTitle>
@@ -52,12 +52,11 @@ export default class Calculator extends Component
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col className = "mprtgage-payment-calculator">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "mprtgage-payment-calculator">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Mortgage Payment Calculato</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.

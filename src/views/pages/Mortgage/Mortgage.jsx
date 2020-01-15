@@ -1,8 +1,10 @@
 import React, {component, Component} from 'react';
 import { connect } from "react-redux";
 import classnames from "classnames";
+import { Link, Redirect } from "react-router-dom";
 import pic1 from "../SCSS/pic1.png"
 import '../SCSS/BasicStyle.scss';
+
 
 import {
     Badge,
@@ -23,13 +25,43 @@ import {
     Col
   } from "reactstrap";
 
+
+
+
 export default class Mortgage extends Component
 {
+    constructor(props) {
+        super(props);
+        this.state = {
+          activeIndex: 0,
+          animating: false,
+        };
+      }
+
+    setRedirect = () => {
+        
+        this.state = {
+            activeIndex: 1,
+            animating: true,
+        };
+        if(this.state.animating){
+            
+            return <Redirect to = '/Calculator' />
+        }
+        
+    }
+
+    renderRedirect = () => {
+        
+        
+    }
+
     render(){
+
         return(
             <div className = "Mortgage">
                 <div className = "header-and-feature">
-                    <p className = "h1">Calculator</p>
+                    <p className = "h1">Mortgage</p>
                 </div>
                 <div className = "main-container">
                     <Container className="container-lg">
@@ -38,26 +70,29 @@ export default class Mortgage extends Component
                         </Row>
                         <br></br>
                         <Row className = "second-row">
-                            <Col className = "first-time-home-buyer">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "first-time-home-buyer">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>First-Time Home Buyer</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                       
+                                        <Button onClick = {this.setRedirect}
+                                            className = "btn-neutral btn-round ml-1" variant="primary">
+                                                Check Details
+                                        </Button>
+                                       
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col className = "inversment-properties">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "inversment-properties">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Investment Properties</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -69,8 +104,8 @@ export default class Mortgage extends Component
                         </Row>
                         <br></br>
                         <Row className = "third-row">
-                            <Col className = "new-to-canada">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "new-to-canada">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>New to Canada</CardTitle>
@@ -83,8 +118,8 @@ export default class Mortgage extends Component
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col className = "low-income-education-center">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "low-income-education-center">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Low income Education Center</CardTitle>

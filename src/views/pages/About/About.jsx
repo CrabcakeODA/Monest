@@ -38,12 +38,11 @@ export default class About extends Component
                         </Row>
                         <br></br>
                         <Row className = "second-row">
-                            <Col className = "our-story">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "our-story">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Our Story</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -52,12 +51,11 @@ export default class About extends Component
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col className = "Agents">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "Agents">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Agents</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -69,12 +67,11 @@ export default class About extends Component
                         </Row>
                         <br></br>
                         <Row className = "third-row">
-                            <Col className = "referral-program">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "referral-program">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Referral Program</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -83,12 +80,11 @@ export default class About extends Component
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col className = "mortgage-insight">
-                                <Card className= "card-lift--hover shadow border-0"  style={{ width: '25rem' }}>
+                            <Col md = "6" className = "mortgage-insight">
+                                <Card className= "shadow"  style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Mortgage Insight</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -100,12 +96,11 @@ export default class About extends Component
                         </Row>
                         <br></br>
                         <Row className = "forth-row">
-                            <Col className = "mortgage-article">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "mortgage-article">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Mortgage Article</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
@@ -114,12 +109,11 @@ export default class About extends Component
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col className = "mortgage-news">
-                                <Card className= "card-lift--hover shadow border-0" style={{ width: '25rem' }}>
+                            <Col md = "6" className = "mortgage-news">
+                                <Card className= "shadow" style={{ width: '27.5rem' }}>
                                     <CardImg src = {pic1} />
                                     <CardBody>
                                         <CardTitle>Mortgage News</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
                                         <CardText>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.

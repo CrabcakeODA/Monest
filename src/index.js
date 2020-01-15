@@ -32,6 +32,9 @@ import MortgageInsight from "views/pages/About/MortgageInsight.jsx"
 import MortgageArticle from "views/pages/About/MortgageArticle.jsx"
 import MortgageNews from "views/pages/About/MortgageNews.jsx"
 
+import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
+import SimpleFooter from "components/Footers/SimpleFooter.jsx";
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducers,
