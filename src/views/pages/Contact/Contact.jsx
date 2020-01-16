@@ -25,7 +25,8 @@ import {
     Row,
     Col,
     ListGroup, 
-    ListGroupItem
+    ListGroupItem,
+    table
   } from "reactstrap";
 
   export default class Contact extends Component{
@@ -84,7 +85,6 @@ import {
                                     <CardText>中国 华旗金融办事处</CardText>
                                     </CardBody>
                                 </Card>
-
                             </Col>
                         </Row>
                     </Container>
