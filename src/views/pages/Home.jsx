@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
 import 'scss/Home.scss';
-// reactstrap components
 import {
   Carousel,
   CarouselItem,
@@ -14,39 +13,35 @@ import {
   CardBody,
   FormGroup,
   Input,
-  InputGroupAddon,
-  InputGroupText,
   InputGroup,
   Container,
   Row,
   Col
 } from "reactstrap";
-
-// index page sections
 import { getPageData } from "../../actions/data";
 
 import styled from 'styled-components'
 
 const items = [
   {
-    src: "assets/img/bg/bg-1.jpeg",
-    altText: 'bg-1.jpeg',
-    caption: 'We Lock lowest mortgage rate today',
+    src: "assets/img/home/carousel1.jpg",
+    altText: 'carousel1.jpg',
+    caption: 'We Lock Lowest Mortgage Rate Today',
     button: "apply mortgage",
     link: '/mortgage'
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'bg-2.jpeg',
-    caption: 'Learning your benefits and suitable plans as a first time buyer or new immigrant',
+    src: "assets/img/home/carousel2.jpg",
+    altText: 'carousel2.jpg',
+    caption: 'Learning Your Benefits And Suitable Plans As A First Time Buyer Or New Immigrant',
     button: 'Contact Monest',
     link: '/contact'
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'bg-3.jpeg',
-    caption: 'Want to look for how you can afford your mortgage?',
-    button: 'See Mortgage Affordability calculator',
+    src: "assets/img/home/carousel3.jpg",
+    altText: 'carousel3.jpg',
+    caption: 'Want To Look For How You Can Afford Your Mortgage?',
+    button: 'See Mortgage calculators',
     link: '/calculator'
   }
 ];
@@ -54,7 +49,7 @@ const items = [
 const CarsouelImg = styled.img`
   object-fit:cover;
   width: 100vw;
-  max-height: 100vh;
+  max-height: 80vh;
 `
 
 class Home extends React.Component {
@@ -111,7 +106,7 @@ class Home extends React.Component {
         onExited={() => this.setAnimatingStatus(false)}
         key={item.src}
       >
-        <CarsouelImg className="CarsouelImg" width='100%' height='80%' src={require(`assets/img/bg/${item.altText}`)} alt={item.altText} />
+        <CarsouelImg className="CarsouelImg" width='100%' height='80%' src={require(`assets/img/home/${item.altText}`)} alt={item.altText} />
         <div className="carousel-caption align-items-center justify-content-center m-0 p-0 carouselText">
           <h1>{item.caption}</h1>
           <Link to={item.link}>
@@ -126,17 +121,6 @@ class Home extends React.Component {
         <main ref="main">
           <div className="position-relative">
             <section className="section p-0">
-              {/* <div className="">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div> */}
               <Container className="d-flex p-0 m-0">
                 <div className="p-0 m-0">
                   <Carousel
@@ -151,7 +135,6 @@ class Home extends React.Component {
                   </Carousel>
                 </div>
               </Container>
-              {/* SVG separator */}
               <div className="separator separator-bottom separator-skew">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,24 +167,24 @@ class Home extends React.Component {
                     {/* add link address */}
                     <Link to="/mortgage">
                       <div className="application-item">
-                            <i className="fa fa-gift fa-3x three-icon" aria-hidden="true"></i>
-                            <div className="application-text">Purchase</div>
+                        <i className="fa fa-gift fa-3x three-icon" aria-hidden="true"></i>
+                        <div className="application-text">Purchase</div>
                       </div>
                     </Link>
                   </Col>
                   <Col className="mb-5 mb-lg-0 col-item" md="4">
                     <Link to="/mortgage">
                       <div className="application-item">
-                            <i className="fa fa-usd fa-3x three-icon" aria-hidden="true"></i>
-                            <div className="application-text">Refinance</div>
+                        <i className="fa fa-usd fa-3x three-icon" aria-hidden="true"></i>
+                        <div className="application-text">Refinance</div>
                       </div>
                     </Link>
                   </Col>
                   <Col className="mb-5 mb-lg-0 col-item renewer-item" md="4">
                     <Link to="/mortgage">
                       <div className="application-item">
-                            <i className="fa fa-check-circle-o fa-3x three-icon" aria-hidden="true"></i>
-                            <div className="application-text">Renewer</div>
+                        <i className="fa fa-check-circle-o fa-3x three-icon" aria-hidden="true"></i>
+                        <div className="application-text">Renewer</div>
                       </div>
                     </Link>
                   </Col>
@@ -264,7 +247,7 @@ class Home extends React.Component {
                   <Row className="row-grid">
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
+                        <CardBody className="py-5 our-server-card">
                           <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
                             <i className="ni ni-check-bold" />
                           </div>
@@ -293,7 +276,7 @@ class Home extends React.Component {
                     </Col>
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
+                        <CardBody className="py-5 our-server-card">
                           <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
                             <i className="ni ni-istanbul" />
                           </div>
@@ -323,7 +306,7 @@ class Home extends React.Component {
                     </Col>
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
+                        <CardBody className="py-5 our-server-card">
                           <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
                             <i className="ni ni-planet" />
                           </div>
@@ -340,12 +323,12 @@ class Home extends React.Component {
                             Travel to meet you in person
                           </p>
                           <Link to="/about/agent">
-                          <Button
-                            className="mt-4"
-                            color="warning"
-                            href="#pablo"
-                          >
-                            Meet Our Team
+                            <Button
+                              className="mt-4"
+                              color="warning"
+                              href="#pablo"
+                            >
+                              Meet Our Team
                           </Button>
                           </Link>
                         </CardBody>
@@ -356,66 +339,66 @@ class Home extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg bg-gradient-info">
+          <section className="section section-lg customer">
             <Container className="pt-0">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
-                  <h2 className="display-3 text-white">Customer</h2>
-                  <p className="lead text-white">
+                  <h2 className="display-3">Customer</h2>
+                  <p className="lead">
                     Find a package suitable for you!
                   </p>
                 </Col>
               </Row>
               <Row className="text-center justify-content-center row-grid mt-5">
-                <Col lg="4">
-                  <h5 className="text-white mb-3">First-Time Home Buyers</h5>
-                  <p className="text-white p-0 m-0">
+                <Col lg="4" className="customer-item first-item">
+                  <h5 className="mb-3">First-Time Home Buyers</h5>
+                  <p className="p-0 m-0">
                     Considering buying your first properties
                   </p>
                   <p className="text-white p-0 m-0">
                     Take a look on what benefit that you can get
                   </p>
-                  <Button
-                    className="mt-4"
-                    color="neutral"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    First time home buyer page
-                          </Button>
+                  <Link to="/mortgage/first-time-home-buyer">
+                    <Button
+                      className="mt-4 cusomer-btn"
+                      color="neutral"
+                    >
+                      First time home buyer page
+                    </Button>
+                  </Link>
                 </Col>
-                <Col lg="4">
-                  <h5 className="text-white mb-3">New to Canada </h5>
-                  <p className="text-white p-0 m-0">
+                <Col lg="4" className="customer-item">
+                  <h5 className="mb-3">New to Canada </h5>
+                  <p className="p-0 m-0">
                     Are you a new comer?
                   </p>
                   <p className="text-white p-0 m-0">
                     Check out with monest to find out
                   </p>
-                  <Button
-                    className="mt-4"
-                    color="neutral"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    new to Canada
+                  <Link to="/mortgage/new-to-Canada">
+                    <Button
+                      className="mt-4 cusomer-btn"
+                      color="neutral"
+                    >
+                      new to Canada
                           </Button>
+                  </Link>
                 </Col>
-                <Col lg="4">
+                <Col lg="4" className="customer-item">
                   <h5 className="text-white mb-3">Low income family </h5>
                   <p className="text-white p-0 m-0">
                     Are you low income or have bad credit history?
                     </p>
                   <p className="text-white p-0 m-0">
                   </p>
-                  <Button
-                    className="mt-4"
-                    color="neutral"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    low income
+                  <Link to="/mortgage/low-income-education-centre">
+                    <Button
+                      className="mt-4 cusomer-btn"
+                      color="neutral"
+                    >
+                      low income
                   </Button>
+                  </Link>
                 </Col>
               </Row>
             </Container>
@@ -719,7 +702,7 @@ class Home extends React.Component {
                       </Row>
                     </CardBody>
                   </Card>
-                  <Card className="shadow shadow-lg--hover mt-5">
+                  <Card className="shadow shadow-lg--hover my-5">
                     <CardBody>
                       <Row>
                         <div className="d-flex px-3">
@@ -778,9 +761,13 @@ class Home extends React.Component {
               <Row className="text-center justify-content-center">
                 <Col lg="10">
                   <h2 className="display-3 text-white">Contact Us</h2>
-                  <p className="lead text-white">
+                  <p className="mt-5 text-white">
                     Unit #1008, 250 Consumers Road
+                  </p>
+                  <p className="text-white">
                     Toronto ON Canada, M2J 4V6
+                  </p>
+                  <p className="mb-0 text-white">
                     (416) 855-4565
                   </p>
                 </Col>
@@ -820,11 +807,6 @@ class Home extends React.Component {
                         })}
                       >
                         <InputGroup className="input-group-alternative">
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="ni ni-user-run" />
-                            </InputGroupText>
-                          </InputGroupAddon>
                           <Input
                             placeholder="Your name"
                             type="text"
@@ -839,11 +821,6 @@ class Home extends React.Component {
                         })}
                       >
                         <InputGroup className="input-group-alternative">
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="ni ni-email-83" />
-                            </InputGroupText>
-                          </InputGroupAddon>
                           <Input
                             placeholder="Email address"
                             type="email"
