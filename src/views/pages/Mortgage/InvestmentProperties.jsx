@@ -6,8 +6,6 @@ import {
     CardBody,
     FormGroup,
     Input,
-    InputGroupAddon,
-    InputGroupText,
     InputGroup,
     Container,
     Row,

@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import 'scss/BasicStyle.scss';
 
 import {
-    Badge,
-    Button,
-    Card,
-    CardBody,
-    CardImg,
-    CardSubtitle,
-    CardText,
-    CardTitle,
-    FormGroup,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col,

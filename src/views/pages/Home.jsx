@@ -126,7 +126,7 @@ class Home extends React.Component {
         <main ref="main">
           <div className="position-relative">
             <section className="section p-0">
-              <div className="">
+              {/* <div className="">
                 <span />
                 <span />
                 <span />
@@ -136,7 +136,7 @@ class Home extends React.Component {
                 <span />
                 <span />
                 <span />
-              </div>
+              </div> */}
               <Container className="d-flex p-0 m-0">
                 <div className="p-0 m-0">
                   <Carousel
@@ -169,9 +169,9 @@ class Home extends React.Component {
               </div>
             </section>
 
-            <section className="section section-lg">
-              <Container>
-                <Row className="justify-content-center text-center mb-lg">
+            <section className="section section-md">
+              <Container className="application">
+                <Row className="justify-content-center text-center mb-sm">
                   <Col lg="8">
                     <h2 className="display-3">Start an application</h2>
                     <p className="lead text-muted">
@@ -179,42 +179,31 @@ class Home extends React.Component {
                     </p>
                   </Col>
                 </Row>
-                <Row className="mb-5">
-                  <Col className="mb-5 mb-lg-0" lg="4" md="6">
-                    <div className="px-4 card-profile-image">
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="Purchase"
-                          className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                          src={require("assets/img/theme/team-1-800x800.jpg")}
-                          style={{ width: "200px" }}
-                        />
-                      </a>
-                    </div>
+                <Row className="row-item">
+                  <Col className="mb-5 mb-lg-0 col-item" md="4">
+                    {/* add link address */}
+                    <Link to="/mortgage">
+                      <div className="application-item">
+                            <i className="fa fa-gift fa-3x three-icon" aria-hidden="true"></i>
+                            <div className="application-text">Purchase</div>
+                      </div>
+                    </Link>
                   </Col>
-                  <Col className="mb-5 mb-lg-0" lg="4" md="6">
-                    <div className="px-4 card-profile-image">
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                          src={require("assets/img/theme/team-1-800x800.jpg")}
-                          style={{ width: "200px" }}
-                        />
-                      </a>
-                    </div>
+                  <Col className="mb-5 mb-lg-0 col-item" md="4">
+                    <Link to="/mortgage">
+                      <div className="application-item">
+                            <i className="fa fa-usd fa-3x three-icon" aria-hidden="true"></i>
+                            <div className="application-text">Refinance</div>
+                      </div>
+                    </Link>
                   </Col>
-                  <Col className="mb-5 mb-lg-0" lg="4" md="6">
-                    <div className="px-4 card-profile-image">
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                          src={require("assets/img/theme/team-1-800x800.jpg")}
-                          style={{ width: "200px" }}
-                        />
-                      </a>
-                    </div>
+                  <Col className="mb-5 mb-lg-0 col-item renewer-item" md="4">
+                    <Link to="/mortgage">
+                      <div className="application-item">
+                            <i className="fa fa-check-circle-o fa-3x three-icon" aria-hidden="true"></i>
+                            <div className="application-text">Renewer</div>
+                      </div>
+                    </Link>
                   </Col>
                 </Row>
               </Container>

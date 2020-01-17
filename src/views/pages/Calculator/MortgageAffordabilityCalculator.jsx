@@ -1,33 +1,18 @@
-import React, { useState } from 'react';
-import { connect } from "react-redux";
-import classnames from "classnames";
+import React from 'react';
+
 
 // reactstrap components
 import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption,
     Button,
-    Card,
-    CardBody,
-    FormGroup,
     Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
-    Col,
-    table,
     Table,
     PopoverBody,
     Popover,
     PopoverHeader
 
 } from "reactstrap";
-import { reactI18nextModule } from 'react-i18next';
 
 export default class MortgageAffordabilityCalcultor extends React.Component {
 

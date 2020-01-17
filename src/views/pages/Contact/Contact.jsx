@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import 'scss/BasicStyle.scss';
 
 import {
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
     Form,
     FormGroup,
     Label,
@@ -88,6 +84,7 @@ export default class Contact extends Component {
                                             <div>
                                                 <h5>Map</h5>
                                                 <iframe
+                                                    title=" "
                                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.050237847296!2d-79.33300958449838!3d43.771815979117406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d2592d50433d%3A0x1d01f41caebd022c!2s250%20Consumers%20Rd%2C%20North%20York%2C%20ON%20M2J%204R4!5e0!3m2!1szh-CN!2sca!4v1579291301790!5m2!1szh-CN!2sca"
                                                     width="100%"
                                                     height="300"

@@ -1,21 +1,13 @@
 import React from 'react';
-import { connect } from "react-redux";
 import classnames from "classnames";
 
 // reactstrap components
 import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption,
     Button,
     Card,
     CardBody,
     FormGroup,
     Input,
-    InputGroupAddon,
-    InputGroupText,
     InputGroup,
     Container,
     Row,
@@ -23,13 +15,6 @@ import {
 } from "reactstrap";
 
 // core components
-import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
-import SimpleFooter from "components/Footers/SimpleFooter.jsx";
-
-
-
-import styled from 'styled-components'
-
 
 
 export default class LowIncomeEducationCentre extends React.Component {
