@@ -248,10 +248,10 @@ class Home extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5 our-server-card">
-                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4 our-server-icon">
                             <i className="ni ni-check-bold" />
                           </div>
-                          <h6 className="text-primary text-uppercase">
+                          <h6 className="text-uppercase">
                             Guaranteed Best Rate
                           </h6>
                           <p className="description mt-3 mb-1">
@@ -264,9 +264,8 @@ class Home extends React.Component {
                             Because the volume we get
                           </p>
                           <Button
-                            className="mt-4"
+                            className="mt-4 our-server-btn"
                             color="primary"
-                            href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
                             See Rate
@@ -277,10 +276,10 @@ class Home extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5 our-server-card">
-                          <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
+                          <div className="icon icon-shape icon-shape-success rounded-circle mb-4 our-server-icon">
                             <i className="ni ni-istanbul" />
                           </div>
-                          <h6 className="text-success text-uppercase">
+                          <h6 className="text-uppercase">
                             Most Suitable Mortgage Plan
                           </h6>
                           <p className="description mt-3 mb-1">
@@ -293,13 +292,9 @@ class Home extends React.Component {
                             That meets demand
                           </p>
                           <Link to="/mortgage">
-                            <Button
-                              className="mt-4"
-                              color="success"
-                              href="#pablo"
-                            >
+                            <Button className="mt-4 our-server-btn">
                               Ask For Suitable Plan
-                          </Button>
+                            </Button>
                           </Link>
                         </CardBody>
                       </Card>
@@ -307,10 +302,10 @@ class Home extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5 our-server-card">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4 our-server-icon">
                             <i className="ni ni-planet" />
                           </div>
-                          <h6 className="text-warning text-uppercase">
+                          <h6 className="text-uppercase">
                             Professional mortgage team
                           </h6>
                           <p className="description mt-3 mb-1">
@@ -323,12 +318,8 @@ class Home extends React.Component {
                             Travel to meet you in person
                           </p>
                           <Link to="/about/agent">
-                            <Button
-                              className="mt-4"
-                              color="warning"
-                              href="#pablo"
-                            >
-                              Meet Our Team
+                          <Button className="mt-4 our-server-btn">
+                            Meet Our Team
                           </Button>
                           </Link>
                         </CardBody>
@@ -631,7 +622,7 @@ class Home extends React.Component {
             </Container>
           </section>
 
-          <section className="section bg-gradient-success">
+          <section className="section feedback">
             <Container>
               <Row className="row-grid">
                 <Col>
@@ -650,14 +641,14 @@ class Home extends React.Component {
                           </Col>
                           <Col className="px-0 mb-0 mb-lg-0" lg="9" md="9">
                             <div className="pl-4">
-                              <h5 className="title text-success">
+                              <h5 className="title">
                                 Jeff
                               </h5>
                               <p>
                                 Sait pans le noir pale au pres sous si va. Souhaitait sanctifier habilement au hurlements or vieillards. Qu erigent laissez ah mouches donjons ah le blottis. Ah compagnies la arriverent du remarquent.
                               </p>
                               <a
-                                className="text-success"
+                                className="learn-more"
                                 href="#pablo"
                                 onClick={e => e.preventDefault()}
                               >
@@ -683,14 +674,14 @@ class Home extends React.Component {
                           </Col>
                           <Col className="px-0 mb-0 mb-lg-0" lg="9" md="9">
                             <div className="pl-4">
-                              <h5 className="title text-success">
+                              <h5 className="title">
                                 Mary
                               </h5>
                               <p>
                                 Sait pans le noir pale au pres sous si va. Souhaitait sanctifier habilement au hurlements or vieillards. Qu erigent laissez ah mouches donjons ah le blottis. Ah compagnies la arriverent du remarquent.
                               </p>
                               <a
-                                className="text-success"
+                                className="learn-more"
                                 href="#pablo"
                                 onClick={e => e.preventDefault()}
                               >
@@ -716,14 +707,14 @@ class Home extends React.Component {
                           </Col>
                           <Col className="px-0 mb-0 mb-lg-0" lg="9" md="9">
                             <div className="pl-4">
-                              <h5 className="title text-success">
+                              <h5 className="title">
                                 Melissa
                               </h5>
                               <p>
                                 Sait pans le noir pale au pres sous si va. Souhaitait sanctifier habilement au hurlements or vieillards. Qu erigent laissez ah mouches donjons ah le blottis. Ah compagnies la arriverent du remarquent.
                               </p>
                               <a
-                                className="text-success"
+                                className="learn-more"
                                 href="#pablo"
                                 onClick={e => e.preventDefault()}
                               >

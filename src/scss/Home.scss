@@ -72,6 +72,19 @@
 }
 .our-server-card{
     height: 370px!important;
+    .our-server-btn,
+    .our-server-icon
+    {
+        background-color: rgba(0, 51, 0, .8);
+        color: #fff;
+    }
+    .our-server-btn{
+        border-color:  rgba(0, 51, 0, .8)!important;
+    }
+    h6{
+        color:rgba(0, 51, 0, .8); 
+        
+    }
 }
 
 .customer{
@@ -102,6 +115,14 @@
     }
     .customer-item:hover{
         background-color: #eeeeee;
+    }
+}
+
+.feedback{
+    background-color: rgba(0, 51, 0, .8);
+    .title,
+    .learn-more{
+        color:rgba(0, 51, 0, .8);
     }
 }
 
