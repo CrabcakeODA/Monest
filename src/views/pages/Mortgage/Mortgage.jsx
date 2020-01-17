@@ -1,17 +1,16 @@
-import React, { component, Component } from 'react';
-import { connect } from "react-redux";
-import classnames from "classnames";
+import React from 'react';
 import { Link, Redirect } from "react-router-dom";
-import pic1 from "scss/pic1.png"
+import mortgage1 from "assets/img/mortgage/mortgage1.jpg";
+import mortgage2 from "assets/img/mortgage/mortgage2.jpg";
+import mortgage3 from "assets/img/mortgage/mortgage3.jpg";
+import mortgage4 from "assets/img/mortgage/mortgage4.jpg";
 import 'scss/BasicStyle.scss';
 import {
     Button,
     Card,
     CardBody,
     CardImg,
-    CardSubtitle,
     CardText,
-    CardTitle,
     Container,
     Row,
     Col
@@ -31,7 +30,6 @@ export default class Mortgage extends React.Component {
     }
 
     setRedirect = () => {
-
         this.state = {
             activeIndex: 1,
             animating: true,
@@ -63,7 +61,7 @@ export default class Mortgage extends React.Component {
                                     <Row className="second-row">
                                         <Col md="6" className="first-time-home-buyer">
                                             <Card className="shadow">
-                                                <CardImg src={pic1} />
+                                                <CardImg src={mortgage1} style={{ height:"300px", width:"100%"}} />
                                                 <CardBody>
                                                     <h5>First-Time Home Buyer</h5>
                                                     <CardText>
@@ -80,7 +78,7 @@ export default class Mortgage extends React.Component {
                                         </Col>
                                         <Col md="6" className="inversment-properties">
                                             <Card className="shadow">
-                                                <CardImg src={pic1} />
+                                                <CardImg src={mortgage2} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
                                                     <h5>Investment Properties</h5>
                                                     <CardText>
@@ -94,10 +92,10 @@ export default class Mortgage extends React.Component {
                                         </Col>
                                     </Row>
                                     <br></br>
-                                    <Row className="third-row">
+                                    <Row className="mt-5 third-row">
                                         <Col md="6" className="new-to-canada">
                                             <Card className="shadow">
-                                                <CardImg src={pic1} />
+                                                <CardImg src={mortgage3} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
                                                     <h5>New to Canada</h5>
                                                     <CardText>
@@ -111,7 +109,7 @@ export default class Mortgage extends React.Component {
                                         </Col>
                                         <Col md="6" className="low-income-education-center">
                                             <Card className="shadow">
-                                                <CardImg src={pic1} />
+                                                <CardImg src={mortgage4} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
                                                     <h5>Low Income Education Center</h5>
                                                     <CardText>
