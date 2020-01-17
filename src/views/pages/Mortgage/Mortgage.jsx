@@ -95,7 +95,7 @@ export default class Mortgage extends React.Component {
                                     <Row className="mt-5 third-row">
                                         <Col md="6" className="new-to-canada">
                                             <Card className="shadow">
-                                                <CardImg src={mortgage3} style={{ height:"300px", width:"100%"}}/>
+                                                <CardImg src={mortgage4} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
                                                     <h5>New to Canada</h5>
                                                     <CardText>
@@ -109,7 +109,7 @@ export default class Mortgage extends React.Component {
                                         </Col>
                                         <Col md="6" className="low-income-education-center">
                                             <Card className="shadow">
-                                                <CardImg src={mortgage4} style={{ height:"300px", width:"100%"}}/>
+                                                <CardImg src={mortgage3} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
                                                     <h5>Low Income Education Center</h5>
                                                     <CardText>
