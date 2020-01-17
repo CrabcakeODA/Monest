@@ -1,0 +1,36 @@
+.carouselText{
+    position: absolute;
+    top:50%;
+    display: block!important;
+    h3{
+        color: #fff;
+    }
+
+    .carsouelBtn{
+        background-color: rgba(0, 51, 0, .8);
+        color: #fff;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    
+}
+
+.CarsouelImg{
+    filter:brightness(30%);
+}
+
+
+@media screen and (max-width: 425px){
+    .carouselText{
+        top:45%;
+        h3{
+            font-size:1rem;
+
+        }
+        .carsouelBtn{
+            font-size: .7rem;
+            padding: 8px;
+            margin-top: 5px;
+        }
+    }
+}
