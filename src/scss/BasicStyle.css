@@ -1,0 +1,28 @@
+.header-and-feature {
+  width: 100%;
+  height: 260px;
+  background-image: url(./background.jpg);
+}
+
+.header-and-feature .h1 {
+  color: seashell;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.main-container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.main-container .sub-content td {
+  vertical-align: top;
+}
+
+.main-container .h2 {
+  color: #2a4741;
+  font-size: 2.2rem;
+  margin-top: 1%;
+}
+/*# sourceMappingURL=BasicStyle.css.map */

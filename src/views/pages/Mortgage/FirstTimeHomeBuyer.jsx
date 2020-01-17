@@ -25,9 +25,6 @@ import {
   // core components
   import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
   import SimpleFooter from "components/Footers/SimpleFooter.jsx";
-  
-
-  
   import styled from 'styled-components'
 
 

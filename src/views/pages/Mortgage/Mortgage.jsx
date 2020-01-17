@@ -2,8 +2,8 @@ import React, {component, Component} from 'react';
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { Link, Redirect } from "react-router-dom";
-import pic1 from "../SCSS/pic1.png"
-import '../SCSS/BasicStyle.scss';
+import pic1 from "scss/pic1.png"
+import 'scss/BasicStyle.scss';
 
 
 import {
@@ -28,8 +28,8 @@ import {
 
 
 
-export default class Mortgage extends Component
-{
+export default class Mortgage extends React.Component{
+
     constructor(props) {
         super(props);
         this.state = {

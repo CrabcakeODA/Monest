@@ -11,19 +11,22 @@
     }
 }
 
-.h2{
-    color: rgb(42, 71, 65);
-    font-size: 2.2rem;
-    margin-top: 1%;
-}
 
 .main-container{
     padding-left: 10%;
     padding-right: 10%;
-}
 
-.shadow{
-    padding: 5%;
-    position: center;
+    .sub-content{
+       td{
+           vertical-align: top;
+       }
+    }
+
+    .h2{
+        color: rgb(42, 71, 65);
+        font-size: 2.2rem;
+        margin-top: 1%;
+    }
+    
 }
 
