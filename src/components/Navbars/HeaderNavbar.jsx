@@ -16,7 +16,6 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
-// import { Image } from 'react-bootstrap';
 import "scss/HeaderNavbar.scss";
 
 class HeaderNavbar extends React.Component {
@@ -26,6 +25,7 @@ class HeaderNavbar extends React.Component {
     };
   }
 
+  
   handleClick(lang) {
     i18next.changeLanguage(lang);
   }
@@ -41,9 +41,9 @@ class HeaderNavbar extends React.Component {
           >
             <Container className="navContainer">
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <img
+                <img className="logo"
                   alt="Logo Imgae"
-                  // src={require("assets/img/brand/argon-react-white.png")}
+                  src={require("assets/img/logo2.png")}
                 />
               </NavbarBrand>
               {/* logo icon */}
@@ -55,9 +55,9 @@ class HeaderNavbar extends React.Component {
                   <Row>
                     <Col className="collapse-brand" xs="6">
                       <Link to="/">
-                        <img
-                          alt="Logo + Monest"
-                          // src={require("assets/img/brand/argon-react.png")}
+                        <img className="mobileLogo"
+                          alt="Logo"
+                          src={require("assets/img/logo.png")}
                         />
                       </Link>
                     </Col>
@@ -149,10 +149,10 @@ class HeaderNavbar extends React.Component {
 
                   {/* language */}
                   <div className="menu-nav flag">
+                    {/* English */}
+                    <img className="en-flag" onClick={() => this.handleClick('en')} alt="English" src={require("assets/img/flag/canada.png")} />
                     {/* 中文 */}
                     <img className="zh-flag" onClick={() => this.handleClick('zh')} alt="English" src={require("assets/img/flag/chinese.png")} />
-                    {/* English */}
-                    <img className="en-flag" onClick={() => this.handleClick('en')} alt="English" src={require("assets/img/flag/english.png")} />
                   </div>
                 </Nav>
               </UncontrolledCollapse>

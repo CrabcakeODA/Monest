@@ -1,11 +1,9 @@
-import React, {component, Component} from 'react';
-import { connect } from "react-redux";
-import classnames from "classnames";
+import React, {Component} from 'react';
 import pic1 from "../SCSS/pic1.png"
 import '../SCSS/BasicStyle.scss';
+import "scss/TopTitle.scss";
 
 import {
-    Badge,
     Button,
     Card,
     CardBody,
@@ -13,11 +11,6 @@ import {
     CardSubtitle,
     CardText,
     CardTitle,
-    FormGroup,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col
@@ -28,8 +21,8 @@ export default class Calculator extends Component
     render(){
         return(
             <div className = "Calculator">
-                <div className = "header-and-feature">
-                    <p className = "h1">Calculator</p>
+                <div className = "titleContainer">
+                    <h1 className = "title">Calculator</h1>
                 </div>
                 <div className = "main-container">
                     <Container className="container-lg">

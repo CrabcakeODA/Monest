@@ -22,10 +22,6 @@ import {
   Col
 } from "reactstrap";
 
-// core components
-import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
-import SimpleFooter from "components/Footers/SimpleFooter.jsx";
-
 // index page sections
 import { getPageData } from "../../actions/data";
 
@@ -110,7 +106,7 @@ class Home extends React.Component {
         key={item.src}
       >
         <CarsouelImg width='100%' height='80%' src={require(`assets/img/bg/${item.altText}`)} alt={item.altText} />
-        <CarouselCaption className="align-items-center justify-content-center m-0 p-0" captionHeader={item.caption} />
+        <CarouselCaption className="align-items-center justify-content-center m-0 p-0" captionHeader={item.caption} captionText={""} />
       </CarouselItem>
     );
 
@@ -119,7 +115,6 @@ class Home extends React.Component {
         <main ref="main">
           <div className="position-relative">
             <section className="section p-0">
-              <HeaderNavbar />
               <div className="">
                 <span />
                 <span />
@@ -883,7 +878,6 @@ class Home extends React.Component {
             </Container>
           </section>
         </main>
-        <SimpleFooter />
       </>
     );
   }
