@@ -40,7 +40,7 @@ export default class MortgageNews extends Component {
                                 press@canwise.com
                             </p>
 
-                            <section className="section section-lg py-5">
+                            <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="justify-content-center text-center mb-sm">
                                         <Col lg="8">
@@ -75,7 +75,7 @@ export default class MortgageNews extends Component {
                                 </Container>
                             </section>
 
-                            <section className="section section-lg py-5">
+                            <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="justify-content-center text-center mb-sm">
                                         <Col lg="8">

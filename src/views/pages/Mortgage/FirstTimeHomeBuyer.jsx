@@ -1,33 +1,16 @@
 import React from 'react';
-import { connect } from "react-redux";
 import classnames from "classnames";
-
-// reactstrap components
 import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption,
     Button,
     Card,
     CardBody,
     FormGroup,
     Input,
-    InputGroupAddon,
-    InputGroupText,
     InputGroup,
     Container,
     Row,
     Col
 } from "reactstrap";
-
-// core components
-import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
-import SimpleFooter from "components/Footers/SimpleFooter.jsx";
-import styled from 'styled-components'
-
-
 
 export default class FirstTimeHomeBuyer extends React.Component {
 
@@ -47,12 +30,11 @@ export default class FirstTimeHomeBuyer extends React.Component {
                 <section className="section">
                     <Container>
                         <div>
-                            <section className="section section-lg py-5">
+                            <section className="section section-lg py-3">
                                 <Container>
-
                                     <Row className="second-row">
-                                    <Col lg="6" className="pr-4 mb-5 apply-info">
-                                            <h2 className="mb-3">First Time Home Buyer</h2>
+                                        <Col lg="6" className="pr-4 mb-5 apply-info">
+                                            <h2 className="mt-5 mb-3">First Time Home Buyer</h2>
                                             <p className="list-group-content">
                                                 There are many benefits and incentives that first-time home buyer can get.
                                                 Take a look for the following point if you’re looking to take the big leap of
@@ -79,15 +61,15 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                 Want to <strong>GET THE PROFESSIONAL ADVICE</strong> on the most suitable mortgage plan, incentive,
                                                 and benefits for your first time home purchase?
                                             </p>
-                                            <p className="list-group-content">
-                                                Contact Monest if you are buying a home for first time and hear our professional advice.
-                                            </p>
+                                            <strong>
+                                                Contact Monest if you are buying a home for first time and hear our professional advice!
+                                            </strong>
                                         </Col>
 
                                         <Col lg="6" className="pl-4 apply-form">
                                             <Card className="profile-page">
                                                 <CardBody className="p-lg-5">
-                                                    <h4 className="mb-4">Your finance is very important to us!</h4>
+                                                    <h5 className="mb-4">First Time Home Buyer Contact form</h5>
                                                     <Row className="full-name">
                                                         <Col lg="6" className="first-name">
                                                             <FormGroup
@@ -96,11 +78,6 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                                 })}
                                                             >
                                                                 <InputGroup className="input-group-alternative">
-                                                                    <InputGroupAddon addonType="prepend">
-                                                                        <InputGroupText>
-                                                                            <i className="ni ni-user-run" />
-                                                                        </InputGroupText>
-                                                                    </InputGroupAddon>
                                                                     <Input
                                                                         placeholder="First name"
                                                                         type="text"
@@ -117,11 +94,6 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                                 })}
                                                             >
                                                                 <InputGroup className="input-group-alternative">
-                                                                    <InputGroupAddon addonType="prepend">
-                                                                        <InputGroupText>
-                                                                            <i className="ni ni-user-run" />
-                                                                        </InputGroupText>
-                                                                    </InputGroupAddon>
                                                                     <Input
                                                                         placeholder="Last name"
                                                                         type="text"
@@ -138,11 +110,6 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                         })}
                                                     >
                                                         <InputGroup className="input-group-alternative">
-                                                            <InputGroupAddon addonType="prepend">
-                                                                <InputGroupText>
-                                                                    <i className="ni ni-user-run" />
-                                                                </InputGroupText>
-                                                            </InputGroupAddon>
                                                             <Input
                                                                 placeholder="Phone Number"
                                                                 type="text"
@@ -157,11 +124,6 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                         })}
                                                     >
                                                         <InputGroup className="input-group-alternative">
-                                                            <InputGroupAddon addonType="prepend">
-                                                                <InputGroupText>
-                                                                    <i className="ni ni-email-83" />
-                                                                </InputGroupText>
-                                                            </InputGroupAddon>
                                                             <Input
                                                                 placeholder="Email Address"
                                                                 type="email"
@@ -178,7 +140,6 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                         <InputGroup className="input-group-alternative">
                                                             <Input
                                                                 type="select"
-                                                                placeholder="Email Address"
                                                                 onFocus={e => this.setState({ nameFocused: true })}
                                                                 onBlur={e => this.setState({ nameFocused: false })}
                                                             >
@@ -206,7 +167,7 @@ export default class FirstTimeHomeBuyer extends React.Component {
                                                             type="button"
                                                         >
                                                             Send Message
-                                            </Button>
+                                                        </Button>
                                                     </div>
                                                 </CardBody>
                                             </Card>
@@ -220,5 +181,4 @@ export default class FirstTimeHomeBuyer extends React.Component {
             </div>
         )
     }
-
 } 

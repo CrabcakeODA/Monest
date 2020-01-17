@@ -56,39 +56,39 @@ export default class Mortgage extends React.Component {
                 <div className="section">
                     <Container>
                         <div>
-                            <h2 className="mb-4 mb-0">Choose your plan</h2>
-                            <div className="border-bottom"></div>
-
-                            <section className="section section-lg py-5">
+                            <h2 className="mb-4 mb-0">A Mortgage Experience Made Better</h2>
+                            <div className="mb-4 border-bottom"></div>
+                            <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="second-row">
                                         <Col md="6" className="first-time-home-buyer">
-                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                            <Card className="shadow">
                                                 <CardImg src={pic1} />
                                                 <CardBody>
-                                                    <CardTitle>First-Time Home Buyer</CardTitle>
+                                                    <h5>First-Time Home Buyer</h5>
                                                     <CardText>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
+                                                        Buying your first home can be a daunting experience. It’s the most expensive purchase you’ll make in your life.
                                                     </CardText>
-
-                                                    <Button onClick={this.setRedirect}
-                                                        className="btn-neutral btn-round ml-1" variant="primary">
-                                                        Check Details
+                                                    <Link to="/mortgage/first-time-home-buyer">
+                                                        <Button onClick={this.setRedirect}
+                                                            className="btn-neutral btn-round ml-1" variant="primary">
+                                                            View Details
                                                     </Button>
+                                                    </Link>
                                                 </CardBody>
                                             </Card>
                                         </Col>
                                         <Col md="6" className="inversment-properties">
-                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                            <Card className="shadow">
                                                 <CardImg src={pic1} />
                                                 <CardBody>
-                                                    <CardTitle>Investment Properties</CardTitle>
+                                                    <h5>Investment Properties</h5>
                                                     <CardText>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                        </CardText>
-                                                    <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                                        You may already own a primary residence and are considering buying a home for investment purposes.
+                                                    </CardText>
+                                                    <Link to="/mortgage/investment-properties">
+                                                        <Button className="btn-neutral btn-round ml-1" variant="primary">View Details</Button>
+                                                    </Link>
                                                 </CardBody>
                                             </Card>
                                         </Col>
@@ -96,30 +96,30 @@ export default class Mortgage extends React.Component {
                                     <br></br>
                                     <Row className="third-row">
                                         <Col md="6" className="new-to-canada">
-                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                            <Card className="shadow">
                                                 <CardImg src={pic1} />
                                                 <CardBody>
-                                                    <CardTitle>New to Canada</CardTitle>
-                                                    <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
+                                                    <h5>New to Canada</h5>
                                                     <CardText>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                        </CardText>
-                                                    <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
+                                                    </CardText>
+                                                    <Link to="/mortgage/new-to-Canada">
+                                                        <Button className="btn-neutral btn-round ml-1" variant="primary">View Details</Button>
+                                                    </Link>
                                                 </CardBody>
                                             </Card>
                                         </Col>
                                         <Col md="6" className="low-income-education-center">
-                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                            <Card className="shadow">
                                                 <CardImg src={pic1} />
                                                 <CardBody>
-                                                    <CardTitle>Low income Education Center</CardTitle>
-                                                    <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
+                                                    <h5>Low Income Education Center</h5>
                                                     <CardText>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                        </CardText>
-                                                    <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                                        We work with lenders that offer excellent mortgage options for low income or self-employed Canadian.
+                                                    </CardText>
+                                                    <Link to="/mortgage/low-income-education-centre">
+                                                        <Button className="btn-neutral btn-round ml-1" variant="primary">View Details</Button>
+                                                    </Link>
                                                 </CardBody>
                                             </Card>
                                         </Col>
