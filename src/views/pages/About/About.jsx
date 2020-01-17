@@ -8,6 +8,7 @@ import about5 from "assets/img/about/about5.jpg";
 import about6 from "assets/img/about/about6.jpg";
 import 'scss/BasicStyle.scss';
 import "scss/TopTitle.scss";
+import 'scss/SecondPage.scss';
 import {
     Button,
     Card,
@@ -30,11 +31,11 @@ export default class About extends Component {
                     <Container>
                         <div>
                             <h2 className="mb-3 mb-0">About Monest</h2>
-                            <div className="mb-5 border-bottom"></div>
+                            <div className="border-bottom"></div>
                             <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="second-row">
-                                        <Col md="6" className="pl-0 first-time-home-buyer">
+                                        <Col md="6" className="second-main-page-card-left">
                                             <Card className="shadow">
                                                 <CardImg src={about1} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
@@ -51,7 +52,7 @@ export default class About extends Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="pr-0 inversment-properties">
+                                        <Col md="6" className="second-main-page-card-right">
                                             <Card className="shadow">
                                                 <CardImg src={about2} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
@@ -65,7 +66,7 @@ export default class About extends Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="mt-5 pl-0 first-time-home-buyer">
+                                        <Col md="6" className="second-main-page-card-left">
                                             <Card className="shadow">
                                                 <CardImg src={about3} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
@@ -82,7 +83,7 @@ export default class About extends Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="mt-5 pr-0 inversment-properties">
+                                        <Col md="6" className="second-main-page-card-right">
                                             <Card className="shadow">
                                                 <CardImg src={about4} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
@@ -96,7 +97,7 @@ export default class About extends Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="mt-5 pl-0 first-time-home-buyer">
+                                        <Col md="6" className="second-main-page-card-left">
                                             <Card className="shadow">
                                                 <CardImg src={about5} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
@@ -113,7 +114,7 @@ export default class About extends Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="mt-5 pr-0 inversment-properties">
+                                        <Col md="6" className="second-main-page-card-right">
                                             <Card className="shadow">
                                                 <CardImg src={about6} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
