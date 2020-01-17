@@ -54,8 +54,8 @@ export default class Mortgage extends React.Component {
                 <div className="section">
                     <Container>
                         <div>
-                            <h2 className="mb-4 mb-0">A Mortgage Experience Made Better</h2>
-                            <div className="mb-4 border-bottom"></div>
+                            <h2 className="mb-5 mb-0">A Mortgage Experience Made Better</h2>
+                            <div className="mb-5 border-bottom"></div>
                             <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="second-row">
