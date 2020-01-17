@@ -31,7 +31,7 @@ export default class MortgageNews extends Component {
                 <section className="section">
                     <Container>
                         <div>
-                            <h2 className="mb-4 mb-0">Monest Financial News</h2>
+                            <h2 className="mb-3 mb-0">Monest Financial News</h2>
                             <div className="border-bottom"></div>
                             <p className="mt-4 mb-0">
                                 Mike XXXXX, Media Contact
