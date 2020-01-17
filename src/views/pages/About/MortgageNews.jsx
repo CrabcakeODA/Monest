@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../SCSS/BasicStyle.scss';
+import 'scss/BasicStyle.scss';
 
 import {
     Badge,
