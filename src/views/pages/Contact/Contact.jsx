@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import '../SCSS/BasicStyle.scss';
-import "scss/TopTitle.scss";
+import React, {component, Component} from 'react';
+import { connect } from "react-redux";
+import classnames from "classnames";
+import pic1 from "scss/pic1.png"
+import 'scss/BasicStyle.scss';
+
 import {
     Card,
     CardBody,
