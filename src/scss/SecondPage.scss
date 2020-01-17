@@ -1,0 +1,55 @@
+//Mobile
+@media screen and (max-width: 768px){
+    .second-main-page-card-left{
+        margin-top: 3rem; 
+        padding: 0rem;
+    }
+
+    .second-main-page-card-right{
+        margin-top: 3rem; 
+        padding: 0rem;
+    }
+
+    .contact-right-group {
+        margin-top: 3rem; 
+        padding: 0rem;
+    }
+
+    .mortgage-news-media-left {
+        margin-top: 0rem; 
+        padding: 0rem;
+    }
+
+    .mortgage-news-media-right {
+        margin-top: 0rem; 
+        padding: 0rem;
+    }
+}   
+
+//PC
+@media screen and (min-width: 769px){
+    .second-main-page-card-left{
+        margin-top: 3rem; 
+        padding: 0rem 1rem 0rem 0rem;
+    }
+
+    .second-main-page-card-right{
+        margin-top: 3rem; 
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+    .contact-right-group {
+        margin-top: 0rem; 
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+    .mortgage-news-media-left {
+        margin-top: 0rem; 
+        padding: 0rem 1rem 0rem 0rem;
+    }
+
+    .mortgage-news-media-right {
+        margin-top: 0rem; 
+        padding: 0rem 0rem 0rem 1rem;
+    }
+}

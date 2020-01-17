@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import calculator1 from "assets/img/calculator/calculator1.jpg";
 import calculator2 from "assets/img/calculator/calculator2.jpg";
 import 'scss/BasicStyle.scss';
+import 'scss/SecondPage.scss';
 
 import {
     Button,
@@ -26,11 +27,11 @@ export default class Calculator extends Component {
                     <Container>
                         <div>
                             <h2 className="mb-3 mb-0">Make smarter decisions with our tools and calculators</h2>
-                            <div className="mb-5 border-bottom"></div>
+                            <div className="border-bottom"></div>
                             <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="second-row">
-                                        <Col md="6" className="pl-0 first-time-home-buyer">
+                                        <Col md="6" className="second-main-page-card-left">
                                             <Card className="shadow">
                                                 <CardImg src={calculator1} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>
@@ -47,7 +48,7 @@ export default class Calculator extends Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="pr-0 inversment-properties">
+                                        <Col md="6" className="second-main-page-card-right">
                                             <Card className="shadow">
                                                 <CardImg src={calculator2} style={{ height: "300px", width: "100%" }} />
                                                 <CardBody>

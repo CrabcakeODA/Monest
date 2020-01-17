@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import 'scss/BasicStyle.scss';
 
 import {
-    Badge,
-    Button,
-    Card,
-    CardBody,
-    CardImg,
-    CardSubtitle,
-    CardText,
-    CardTitle,
-    FormGroup,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col,
@@ -40,17 +27,17 @@ export default class MortgageNews extends Component {
                                 press@canwise.com
                             </p>
 
-                            <section className="section section-lg py-3">
+                            <section className="section section-lg py-5">
                                 <Container>
                                     <Row className="justify-content-center text-center mb-sm">
                                         <Col lg="8">
-                                            <h2 className="display-3">Media Appearances</h2>
+                                            <h2>Media Appearances</h2>
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col className="pr-5 px-0 mb-5 mb-lg-0" lg="6" md="6">
-                                            <div className="px-0 mb-3">
-                                                <video width="440" controls>
+                                        <Col className="mortgage-news-media-left" lg="6" md="6">
+                                            <div>
+                                                <video width="100%" controls>
                                                     <source src="" type="video/mp4" />
                                                     <source src="" type="video/ogg" />
                                                     Your browser does not support HTML5 video.
@@ -60,9 +47,9 @@ export default class MortgageNews extends Component {
                                                 On disait tuiles frenes du jurons.
                                             </div>
                                         </Col>
-                                        <Col className="pr-5 px-0 mb-5 mb-lg-0" lg="6" md="6">
-                                            <div className="px-0 mb-3">
-                                                <video width="440" controls>
+                                        <Col className="mortgage-news-media-right" lg="6" md="6">
+                                            <div className="">
+                                                <video width="100%" controls>
                                                     <source src="" type="video/mp4" />
                                                     <source src="" type="video/ogg" />
                                                     Your browser does not support HTML5 video.
@@ -79,7 +66,7 @@ export default class MortgageNews extends Component {
                                 <Container>
                                     <Row className="justify-content-center text-center mb-sm">
                                         <Col lg="8">
-                                            <h2 className="display-3">As seen on</h2>
+                                            <h2>As seen on</h2>
                                         </Col>
                                     </Row>
                                     <Row>
@@ -117,7 +104,7 @@ export default class MortgageNews extends Component {
                                 </Container>
                             </section>
 
-                            <h2 className="display-3">All News</h2>
+                            <h3 className="ml-3 mt-5">All News</h3>
                             <Table>
                                 <thead>
                                     <tr>
@@ -146,8 +133,6 @@ export default class MortgageNews extends Component {
                                     </tr>
                                 </tbody>
                             </Table>
-
-
                         </div>
                     </Container>
                 </section>

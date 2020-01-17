@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import 'scss/BasicStyle.scss';
-
+import 'scss/SecondPage.scss';
 import {
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
     Form,
     FormGroup,
     Label,
@@ -57,7 +53,7 @@ export default class Contact extends Component {
                                                 </Button>
                                             </Form>
                                         </Col>
-                                        <Col md="6" className="pl-5 pr-0">
+                                        <Col md="6" className="contact-right-group">
                                             <h5 className="my-1 mb-3">Contact info</h5>
                                             <strong>
                                                 Address
