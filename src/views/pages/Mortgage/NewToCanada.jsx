@@ -55,7 +55,7 @@ export default class NewToCanada extends React.Component {
                                         <Col lg="6" className="pl-4 apply-form">
                                             <Card className="profile-page">
                                                 <CardBody className="p-lg-5">
-                                                    <h4 className="mb-4">New Immigrant Contact Form</h4>
+                                                    <h5 className="mb-4">New Immigrant Contact Form</h5>
                                                     <Row className="full-name">
                                                         <Col lg="6" className="first-name">
                                                             <FormGroup
