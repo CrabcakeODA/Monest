@@ -1,0 +1,51 @@
+.carouselText{
+    position: absolute;
+    top:47%;
+    display: block!important;
+    h1{
+        color: #fff;
+    }
+
+    .carsouelBtn{
+        background-color: rgba(0, 51, 0, .8);
+        color: #fff;
+        margin-top: 50px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        padding: 20px 30px;
+    }
+    
+}
+
+.CarsouelImg{
+    filter:brightness(30%);
+}
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .carouselText{
+        top:48%;
+        h1{
+            font-size:1.6rem;
+
+        }
+        .carsouelBtn{
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .carouselText{
+        top:45%;
+        h1{
+            font-size:1rem;
+
+        }
+        .carsouelBtn{
+            font-size: .7rem;
+            padding: 8px 10px;
+            margin-top: 5px;
+        }
+    }
+}
