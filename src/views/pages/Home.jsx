@@ -309,14 +309,15 @@ class Home extends React.Component {
                           <p className="description mt-1 mb-1">
                             That meets demand
                           </p>
-                          <Button
-                            className="mt-4"
-                            color="success"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            Ask For Suitable Plan
+                          <Link to="/mortgage">
+                            <Button
+                              className="mt-4"
+                              color="success"
+                              href="#pablo"
+                            >
+                              Ask For Suitable Plan
                           </Button>
+                          </Link>
                         </CardBody>
                       </Card>
                     </Col>
@@ -338,14 +339,15 @@ class Home extends React.Component {
                           <p className="description mt-1 mb-1">
                             Travel to meet you in person
                           </p>
+                          <Link to="/about/agent">
                           <Button
                             className="mt-4"
                             color="warning"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
                           >
                             Meet Our Team
                           </Button>
+                          </Link>
                         </CardBody>
                       </Card>
                     </Col>
@@ -413,14 +415,14 @@ class Home extends React.Component {
                     onClick={e => e.preventDefault()}
                   >
                     low income
-                          </Button>
+                  </Button>
                 </Col>
               </Row>
             </Container>
           </section>
 
           <section className="mt-5 section section-lg py-3">
-            <Container> 
+            <Container>
               <Row className="justify-content-center text-center mb-sm">
                 <Col lg="8">
                   <h2 className="display-3">Our partners</h2>

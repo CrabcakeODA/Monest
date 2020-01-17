@@ -5,6 +5,7 @@ import mortgage2 from "assets/img/mortgage/mortgage2.jpg";
 import mortgage3 from "assets/img/mortgage/mortgage3.jpg";
 import mortgage4 from "assets/img/mortgage/mortgage4.jpg";
 import 'scss/BasicStyle.scss';
+import 'scss/SecondPage.scss';
 import {
     Button,
     Card,
@@ -15,9 +16,6 @@ import {
     Row,
     Col
 } from "reactstrap";
-
-
-
 
 export default class Mortgage extends React.Component {
 
@@ -55,11 +53,11 @@ export default class Mortgage extends React.Component {
                     <Container>
                         <div>
                             <h2 className="mb-3 mb-0">A Mortgage Experience Made Better</h2>
-                            <div className="mb-5 border-bottom"></div>
+                            <div className="border-bottom"></div>
                             <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="second-row">
-                                        <Col md="6" className="pl-0 first-time-home-buyer">
+                                        <Col md="6" className="second-main-page-card-left">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage1} style={{ height:"300px", width:"100%"}} />
                                                 <CardBody>
@@ -76,7 +74,7 @@ export default class Mortgage extends React.Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="pr-0 inversment-properties">
+                                        <Col md="6" className="second-main-page-card-right">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage2} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
@@ -90,7 +88,7 @@ export default class Mortgage extends React.Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="mt-5 pl-0 new-to-canada">
+                                        <Col md="6" className="second-main-page-card-left">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage4} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
@@ -104,7 +102,7 @@ export default class Mortgage extends React.Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="mt-5 pr-0 low-income-education-center">
+                                        <Col md="6" className="second-main-page-card-right">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage3} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>

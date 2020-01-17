@@ -1,7 +1,4 @@
 import React from 'react';
-
-
-// reactstrap components
 import {
     Button,
     Input,
@@ -11,11 +8,9 @@ import {
     PopoverBody,
     Popover,
     PopoverHeader
-
 } from "reactstrap";
 
 export default class MortgageAffordabilityCalcultor extends React.Component {
-
     render() {
         return (
             <div className="Mortgage">
