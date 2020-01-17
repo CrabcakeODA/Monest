@@ -113,7 +113,7 @@ class Home extends React.Component {
       >
         <CarsouelImg className="CarsouelImg" width='100%' height='80%' src={require(`assets/img/bg/${item.altText}`)} alt={item.altText} />
         <div className="carousel-caption align-items-center justify-content-center m-0 p-0 carouselText">
-          <h3>{item.caption}</h3>
+          <h1>{item.caption}</h1>
           <Link to={item.link}>
             <button className="btn btn-lg carsouelBtn">{item.button}</button>
           </Link>
