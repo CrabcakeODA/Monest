@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import mortgage1 from "assets/img/mortgage/mortgage1.jpg";
 import mortgage2 from "assets/img/mortgage/mortgage2.jpg";
 import mortgage3 from "assets/img/mortgage/mortgage3.jpg";
@@ -25,22 +25,6 @@ export default class Mortgage extends React.Component {
             activeIndex: 0,
             animating: false,
         };
-    }
-
-    setRedirect = () => {
-        this.state = {
-            activeIndex: 1,
-            animating: true,
-        };
-        if (this.state.animating) {
-
-            return <Redirect to='/Calculator' />
-        }
-
-    }
-
-    renderRedirect = () => {
-
     }
 
     render() {
