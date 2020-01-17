@@ -59,7 +59,7 @@ export default class Mortgage extends React.Component {
                             <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="second-row">
-                                        <Col md="6" className="first-time-home-buyer">
+                                        <Col md="6" className="pl-0 first-time-home-buyer">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage1} style={{ height:"300px", width:"100%"}} />
                                                 <CardBody>
@@ -76,7 +76,7 @@ export default class Mortgage extends React.Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="inversment-properties">
+                                        <Col md="6" className="pr-0 inversment-properties">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage2} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
@@ -93,7 +93,7 @@ export default class Mortgage extends React.Component {
                                     </Row>
                                     <br></br>
                                     <Row className="mt-5 third-row">
-                                        <Col md="6" className="new-to-canada">
+                                        <Col md="6" className="pl-0 new-to-canada">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage4} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
@@ -107,7 +107,7 @@ export default class Mortgage extends React.Component {
                                                 </CardBody>
                                             </Card>
                                         </Col>
-                                        <Col md="6" className="low-income-education-center">
+                                        <Col md="6" className="pr-0 low-income-education-center">
                                             <Card className="shadow">
                                                 <CardImg src={mortgage3} style={{ height:"300px", width:"100%"}}/>
                                                 <CardBody>
