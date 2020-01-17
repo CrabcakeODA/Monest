@@ -63,7 +63,7 @@ export default class Contact extends Component {
                                                 Address
                                             </strong>
                                             <p className="my-1">Unit #1008 </p>
-                                            <p className="my-1">250 Consumers Road </p>
+                                            <p className="my-1">250 Consumers Road</p>
                                             <p className="my-1">Toronto </p>
                                             <p className="my-1 mb-3">M2J 4V6 </p>
 
@@ -84,6 +84,17 @@ export default class Contact extends Component {
                                             <p>
                                                 2. Take the bus 985/85 and get off the bus at Sheppard Avenue/Consumers Road, Walk in about 8 minutes to arrive to our building.
                                             </p>
+
+                                            <div>
+                                                <h5>Map</h5>
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.050237847296!2d-79.33300958449838!3d43.771815979117406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d2592d50433d%3A0x1d01f41caebd022c!2s250%20Consumers%20Rd%2C%20North%20York%2C%20ON%20M2J%204R4!5e0!3m2!1szh-CN!2sca!4v1579291301790!5m2!1szh-CN!2sca"
+                                                    width="100%"
+                                                    height="300"
+                                                    frameborder="0"
+                                                    allowfullscreen="">
+                                                </iframe>
+                                            </div>
                                         </Col>
                                     </Row>
                                 </Container>
