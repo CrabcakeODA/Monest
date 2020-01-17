@@ -45,91 +45,89 @@ export default class Mortgage extends React.Component {
 
     renderRedirect = () => {
 
-
     }
 
     render() {
-
         return (
             <div className="Mortgage">
                 <div className="titleContainer">
                     <h1 className="title">Mortgage</h1>
                 </div>
-                <div className="main-container">
-                    <Container className="container-lg">
-                        <Row className="first-row">
-                            <Col className="border-bottom"><p className="h2">Choose your perfect plan</p></Col>
-                        </Row>
-                        <br></br>
-                        <Row className="second-row">
-                            <Col md="6" className="first-time-home-buyer">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>First-Time Home Buyer</CardTitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
-                                        </CardText>
+                <div className="section">
+                    <Container>
+                        <div>
+                            <h2 className="mb-4 mb-0">Choose your plan</h2>
+                            <div className="border-bottom"></div>
 
-                                        <Button onClick={this.setRedirect}
-                                            className="btn-neutral btn-round ml-1" variant="primary">
-                                            Check Details
-                                        </Button>
+                            <section className="section section-lg py-5">
+                                <Container>
+                                    <Row className="second-row">
+                                        <Col md="6" className="first-time-home-buyer">
+                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                                <CardImg src={pic1} />
+                                                <CardBody>
+                                                    <CardTitle>First-Time Home Buyer</CardTitle>
+                                                    <CardText>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </CardText>
 
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                            <Col md="6" className="inversment-properties">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>Investment Properties</CardTitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
+                                                    <Button onClick={this.setRedirect}
+                                                        className="btn-neutral btn-round ml-1" variant="primary">
+                                                        Check Details
+                                                    </Button>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                        <Col md="6" className="inversment-properties">
+                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                                <CardImg src={pic1} />
+                                                <CardBody>
+                                                    <CardTitle>Investment Properties</CardTitle>
+                                                    <CardText>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
                                         </CardText>
-                                        <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <br></br>
-                        <Row className="third-row">
-                            <Col md="6" className="new-to-canada">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>New to Canada</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
+                                                    <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                    <br></br>
+                                    <Row className="third-row">
+                                        <Col md="6" className="new-to-canada">
+                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                                <CardImg src={pic1} />
+                                                <CardBody>
+                                                    <CardTitle>New to Canada</CardTitle>
+                                                    <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
+                                                    <CardText>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
                                         </CardText>
-                                        <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                            <Col md="6" className="low-income-education-center">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>Low income Education Center</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
+                                                    <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                        <Col md="6" className="low-income-education-center">
+                                            <Card className="shadow" style={{ width: '27.5rem' }}>
+                                                <CardImg src={pic1} />
+                                                <CardBody>
+                                                    <CardTitle>Low income Education Center</CardTitle>
+                                                    <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
+                                                    <CardText>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
                                         </CardText>
-                                        <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <br></br>
+                                                    <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </section>
+                        </div>
                     </Container>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                 </div>
             </div>
         )
