@@ -7,6 +7,10 @@ import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import './i18n';
 
+import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
+import SimpleFooter from "components/Footers/SimpleFooter.jsx";
+import ScrollToTop from "views/ScrollToTop.js";
+
 import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss";
@@ -44,6 +48,8 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
+    <HeaderNavbar />
+    <ScrollToTop />
       <Switch>
         {/* The component has access to the props coming through the Route. */}
         <Route path="/" exact render={props => <Home {...props} />} />
@@ -70,7 +76,9 @@ ReactDOM.render(
         
         <Redirect to="/" />
       </Switch>
+      <SimpleFooter />
     </BrowserRouter>
+    
   </Provider>,
   document.getElementById("root")
 );

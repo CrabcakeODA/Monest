@@ -3,9 +3,8 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 import pic1 from "scss/pic1.png"
 import 'scss/BasicStyle.scss';
-
+import "scss/TopTitle.scss";
 import {
-    Badge,
     Button,
     Card,
     CardBody,
@@ -13,11 +12,6 @@ import {
     CardSubtitle,
     CardText,
     CardTitle,
-    FormGroup,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col
@@ -28,8 +22,8 @@ export default class About extends Component
     render(){
         return(
             <div className = "About">
-                <div className = "header-and-feature">
-                    <p className = "h1">About Monest</p>
+                <div className = "titleContainer">
+                    <h1 className = "title">About Monest</h1>
                 </div>
                 <div className = "main-container">
                     <Container className="container-lg">

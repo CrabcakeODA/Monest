@@ -1,7 +1,7 @@
 
 .footer{
-    background-color: #383838;
-    padding: 1rem 0 2rem 0;
+    background-color: #383838!important;
+    padding: 1rem 0 2rem 0!important;
 
     .footerContainer{
         hr{
@@ -111,6 +111,9 @@
     }
     .call{
         text-align: center;
+    }
+    .copyright{
+        padding-left: 15px;
     }
 }
 @media screen and (max-width: 425px){

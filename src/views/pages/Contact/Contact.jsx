@@ -5,35 +5,28 @@ import pic1 from "scss/pic1.png"
 import 'scss/BasicStyle.scss';
 
 import {
-    Badge,
-    Button,
     Card,
     CardBody,
-    CardImg,
-    CardSubtitle,
     CardText,
     CardTitle,
     Form,
     FormGroup,
-    FormText,
     Label,
     Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col,
     ListGroup, 
-    ListGroupItem
+    ListGroupItem,
+    table
   } from "reactstrap";
 
   export default class Contact extends Component{
     render(){
         return(
             <div className = "Contact">
-                 <div className = "header-and-feature">
-                    <p className = "h1">Contact</p>
+                <div className = "titleContainer">
+                    <h1 className = "title">Contact</h1>
                 </div>
                 <div className = "main-container">
                     <Container className="container-lg">
@@ -84,7 +77,6 @@ import {
                                     <CardText>中国 华旗金融办事处</CardText>
                                     </CardBody>
                                 </Card>
-
                             </Col>
                         </Row>
                     </Container>
