@@ -64,6 +64,47 @@
 
 }
 
+.section-shaped{
+    .shape-default{
+        background-image: url('https://mortgagemf.com/wp-content/uploads/2019/05/about-bg-2.jpg')!important;
+        filter:brightness(30%);
+    }
+}
+.our-server-card{
+    height: 370px!important;
+}
+
+.customer{
+    background-color: #f8f8f8!important;
+    h2,
+    .lead{
+        color: #5b5e60!important;
+    }
+
+    .customer-item{
+        padding:20px;     
+        h5,
+        p{
+            color: #383838!important;
+        }
+        .cusomer-btn{
+            color:rgba(0, 51, 0, .8);
+            cursor: pointer;
+        }
+        .cusomer-btn:hover{
+            background-color: rgba(0, 51, 0, .8);
+            color: #fff;
+            border-color: rgba(0, 51, 0, .8);
+        }
+    }
+    .first-item{
+        padding:20px 5px;
+    }
+    .customer-item:hover{
+        background-color: #eeeeee;
+    }
+}
+
 @media screen and (min-width: 426px) and (max-width: 768px){
     .carouselText{
         top:48%;

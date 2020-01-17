@@ -126,17 +126,6 @@ class Home extends React.Component {
         <main ref="main">
           <div className="position-relative">
             <section className="section p-0">
-              {/* <div className="">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div> */}
               <Container className="d-flex p-0 m-0">
                 <div className="p-0 m-0">
                   <Carousel
@@ -264,7 +253,7 @@ class Home extends React.Component {
                   <Row className="row-grid">
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
+                        <CardBody className="py-5 our-server-card">
                           <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
                             <i className="ni ni-check-bold" />
                           </div>
@@ -293,7 +282,7 @@ class Home extends React.Component {
                     </Col>
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
+                        <CardBody className="py-5 our-server-card">
                           <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
                             <i className="ni ni-istanbul" />
                           </div>
@@ -323,7 +312,7 @@ class Home extends React.Component {
                     </Col>
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
+                        <CardBody className="py-5 our-server-card">
                           <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
                             <i className="ni ni-planet" />
                           </div>
@@ -356,66 +345,69 @@ class Home extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg bg-gradient-info">
+          <section className="section section-lg customer">
             <Container className="pt-0">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
-                  <h2 className="display-3 text-white">Customer</h2>
-                  <p className="lead text-white">
+                  <h2 className="display-3">Customer</h2>
+                  <p className="lead">
                     Find a package suitable for you!
                   </p>
                 </Col>
               </Row>
               <Row className="text-center justify-content-center row-grid mt-5">
-                <Col lg="4">
-                  <h5 className="text-white mb-3">First-Time Home Buyers</h5>
-                  <p className="text-white p-0 m-0">
+                <Col lg="4" className="customer-item first-item">
+                  <h5 className="mb-3">First-Time Home Buyers</h5>
+                  <p className="p-0 m-0">
                     Considering buying your first properties
                   </p>
                   <p className="text-white p-0 m-0">
                     Take a look on what benefit that you can get
                   </p>
-                  <Button
-                    className="mt-4"
-                    color="neutral"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
+                  <Link to="/mortgage/first-time-home-buyer">
+                    <Button
+                      className="mt-4 cusomer-btn"
+                      color="neutral"
+                      onClick={e => e.preventDefault()}
+                    >
                     First time home buyer page
-                          </Button>
+                    </Button>
+                  </Link>
                 </Col>
-                <Col lg="4">
-                  <h5 className="text-white mb-3">New to Canada </h5>
-                  <p className="text-white p-0 m-0">
+                <Col lg="4" className="customer-item">
+                  <h5 className="mb-3">New to Canada </h5>
+                  <p className="p-0 m-0">
                     Are you a new comer?
                   </p>
                   <p className="text-white p-0 m-0">
                     Check out with monest to find out
                   </p>
+                  <Link to="/mortgage/new-to-Canada">
                   <Button
-                    className="mt-4"
+                    className="mt-4 cusomer-btn"
                     color="neutral"
-                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
                     new to Canada
                           </Button>
+                    </Link>
                 </Col>
-                <Col lg="4">
+                <Col lg="4" className="customer-item">
                   <h5 className="text-white mb-3">Low income family </h5>
                   <p className="text-white p-0 m-0">
                     Are you low income or have bad credit history?
                     </p>
                   <p className="text-white p-0 m-0">
                   </p>
+                  <Link to="/mortgage/low-income-education-centre">
                   <Button
-                    className="mt-4"
+                    className="mt-4 cusomer-btn"
                     color="neutral"
-                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
                     low income
                   </Button>
+                  </Link>
                 </Col>
               </Row>
             </Container>
