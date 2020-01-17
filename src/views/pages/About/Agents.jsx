@@ -2,22 +2,7 @@ import React, { Component } from 'react';
 import "scss/OurStory.scss";
 
 import {
-    Badge,
-    Button,
-    Card,
-    CardBody,
-    CardImg,
-    CardSubtitle,
-    CardText,
-    CardTitle,
-    FormGroup,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
-    Row,
-    Col
 } from "reactstrap";
 
 export default class Agents extends Component {
