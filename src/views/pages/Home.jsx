@@ -705,7 +705,7 @@ class Home extends React.Component {
                       </Row>
                     </CardBody>
                   </Card>
-                  <Card className="shadow shadow-lg--hover mt-5">
+                  <Card className="shadow shadow-lg--hover my-5">
                     <CardBody>
                       <Row>
                         <div className="d-flex px-3">
