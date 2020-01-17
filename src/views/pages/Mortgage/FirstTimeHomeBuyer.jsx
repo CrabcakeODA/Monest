@@ -185,41 +185,35 @@ import {
                                 <Col lg = "6" className = "apply-info">
                                     <p className = "h1">First Time Home Buyer</p>
                                     <p className ="list-group-content">
-                                    There are many benefits and incentives that first-time home buyer can get.
-                                    Take a look for the following point if you’re looking to take the big leap of
-                                    becoming a first-time homebuyer:
-                                    </p>
-                                    <ul className = "list-group-content">
-                                        <li>wertyuio</li>
-                                        <li>23456789okmjhgf</li>
-                                        <li>dcfvbnmkiuyhgfcvbnm</li>
-                                    </ul>
-                                    <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                                
+                                        There are many benefits and incentives that first-time home buyer can get.
+                                        Take a look for the following point if you’re looking to take the big leap of
+                                        becoming a first-time homebuyer:
                                     </p>
                                     <ol className = "list-group-content">
                                         <li>First-Time Home Buyer’s Tax Credit—This program amounts to a $750 rebate for 
                                             first-time buyers and is meant to help defray housing costs such as legal and inspection fees. 
                                             To receive the credit, you must claim it on your tax return.
                                         </li>
-                                        <li>dghjuklsx,cmnbghjuxikol,m</li>
-                                        <li>cdfghjkjhbvbnjmk,jhgfghjkljnhgbvhjnk</li>
-                                        <li>dfghjkjhgvfcvgbhnjmklkjhgfghjkl</li>
-                                        <li>dfghjkhgfdfghjkjhgvfcvgbhjnmk,mjnhgbvhjk</li>
+                                        <li> First-Time Home Buyer Incentive — The First-Time Home Buyer Incentive can help you purchase your first home.
+                                             This incentive aims to help first-time homebuyers without adding to their financial burdens. 
+                                             There are no additional monthly payments.</li>
+                                        <li>RRSP Plan—the federal government allows you to borrow up to $25,000 from your RRSP to be used towards a down payment 
+                                            on your first home. The borrowed amount must eventually be repaid back into the RRSP. 
+                                            If not, tax penalties will apply.</li>
+                                        <li>Land Transfer Tax Rebate— only available to residents of Ontario, British Columbia and Prince Edward Island. 
+                                            For Toronto residents, First-time buyers can get up to $3,725 back for Land Transfer Tax Rebate.</li>
                                     </ol>     
-                                    <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
+                                    <p className ="list-group-content h5">
+                                        The most suitable plan:
                                     </p>
-
+                                    <p className ="list-group-content">
+                                        Want to <strong>GET THE PROFESSIONAL ADVICE</strong> on the most suitable mortgage plan, incentive,
+                                        and benefits for your first time home purchase? 
+                                    </p>
+                                    <p className ="list-group-content">    
+                                        Contact Monest if you are buying a home for first time and hear our professional advice.
+                                    </p>
+                                    <p className ="h5"><strong>contact Monest today!</strong></p>            
                                 </Col>
                             </Row>
 

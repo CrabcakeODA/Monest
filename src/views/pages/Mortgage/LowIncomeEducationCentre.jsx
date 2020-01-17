@@ -185,39 +185,15 @@ import {
                                     </Card>
                                 </Col>
                                 <Col lg = "6" className = "apply-info">
-                                    <p className = "h1">Low Income Education Centre</p>
+                                    <p className = "h1">Low Income Education Centre</p>  
                                     <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process. 
-                                        However, individuals who have recently moved to the country and aren’t yet citizens can still get a mortgage. The process is just more complex and the documentation needed is more extensive.
-                                        There are a few factors that ultimately determine what kind of mortgage you’ll qualify for as a newcomer to Canada. These factors are:
+                                    Many of the company they claimed that they have good rate but are only available to homebuyers
+                                    with good income. In Monest, We take care of the Low Income Family too.
+                                    Don’t be turned away and give up your dream for buying a place to own. 
+                                    We work with lenders that offer excellent mortgage options for low income or self-employed Canadian.
                                     </p>
-                                    <ul className = "list-group-content">
-                                        <li>wertyuio</li>
-                                        <li>23456789okmjhgf</li>
-                                        <li>dcfvbnmkiuyhgfcvbnm</li>
-                                    </ul>
-                                    <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                                
-                                    </p>
-                                    <ol className = "list-group-content">
-                                        <li>fghjklkjnbvcvbnm,</li>
-                                        <li>dghjuklsx,cmnbghjuxikol,m</li>
-                                        <li>cdfghjkjhbvbnjmk,jhgfghjkljnhgbvhjnk</li>
-                                        <li>dfghjkjhgvfcvgbhnjmklkjhgfghjkl</li>
-                                        <li>dfghjkhgfdfghjkjhgvfcvgbhjnmk,mjnhgbvhjk</li>
-                                    </ol>     
-                                    <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                    </p>
+                                    <p className = "h5"><strong>Contact Monest if you ‘re interested</strong></p>
+                                    
 
                                 </Col>
                             </Row>

@@ -185,39 +185,17 @@ import {
                                     </Card>
                                 </Col>
                                 <Col lg = "6" className = "apply-info">
-                                    <p className = "h1">Investment Properties</p>
+                                    <p className = "h1">Investment Properties</p>  
                                     <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process. 
-                                        However, individuals who have recently moved to the country and aren’t yet citizens can still get a mortgage. The process is just more complex and the documentation needed is more extensive.
-                                        There are a few factors that ultimately determine what kind of mortgage you’ll qualify for as a newcomer to Canada. These factors are:
+                                    You may already own a primary residence and are now considering buying a home for investment purposes. 
+                                    Mortgage rates on investment properties (owner occupied) are similar to those for primary mortgages.
+                                    But some lenders do not offer it to investment property mortgages at all. 
+                                    Our experienced team can provide you professional advice on what’s the best mortgage plan for buying a 
+                                    investment property. 
                                     </p>
-                                    <ul className = "list-group-content">
-                                        <li>wertyuio</li>
-                                        <li>23456789okmjhgf</li>
-                                        <li>dcfvbnmkiuyhgfcvbnm</li>
-                                    </ul>
-                                    <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                                
-                                    </p>
-                                    <ol className = "list-group-content">
-                                        <li>fghjklkjnbvcvbnm,</li>
-                                        <li>dghjuklsx,cmnbghjuxikol,m</li>
-                                        <li>cdfghjkjhbvbnjmk,jhgfghjkljnhgbvhjnk</li>
-                                        <li>dfghjkjhgvfcvgbhnjmklkjhgfghjkl</li>
-                                        <li>dfghjkhgfdfghjkjhgvfcvgbhjnmk,mjnhgbvhjk</li>
-                                    </ol>     
-                                    <p className ="list-group-content">
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
-                                    </p>
+                                    <p className ="list-group-content">Want to find out what the best rate and advice that you can get for investment property?</p> 
+                                    <p className ="h5"><strong>contact Monest today!</strong></p>
+                                    
 
                                 </Col>
                             </Row>
