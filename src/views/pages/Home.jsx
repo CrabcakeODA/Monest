@@ -419,8 +419,8 @@ class Home extends React.Component {
             </Container>
           </section>
 
-          <section className="section section-lg py-5">
-            <Container>
+          <section className="mt-5 section section-lg py-3">
+            <Container> 
               <Row className="justify-content-center text-center mb-sm">
                 <Col lg="8">
                   <h2 className="display-3">Our partners</h2>

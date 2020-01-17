@@ -1,17 +1,16 @@
-import React, { component, Component } from 'react';
-import { connect } from "react-redux";
-import classnames from "classnames";
+import React from 'react';
 import { Link, Redirect } from "react-router-dom";
-import pic1 from "scss/pic1.png"
+import mortgage1 from "assets/img/mortgage/mortgage1.jpg";
+import mortgage2 from "assets/img/mortgage/mortgage2.jpg";
+import mortgage3 from "assets/img/mortgage/mortgage3.jpg";
+import mortgage4 from "assets/img/mortgage/mortgage4.jpg";
 import 'scss/BasicStyle.scss';
 import {
     Button,
     Card,
     CardBody,
     CardImg,
-    CardSubtitle,
     CardText,
-    CardTitle,
     Container,
     Row,
     Col
@@ -31,7 +30,6 @@ export default class Mortgage extends React.Component {
     }
 
     setRedirect = () => {
-
         this.state = {
             activeIndex: 1,
             animating: true,
@@ -45,91 +43,89 @@ export default class Mortgage extends React.Component {
 
     renderRedirect = () => {
 
-
     }
 
     render() {
-
         return (
             <div className="Mortgage">
                 <div className="titleContainer">
                     <h1 className="title">Mortgage</h1>
                 </div>
-                <div className="main-container">
-                    <Container className="container-lg">
-                        <Row className="first-row">
-                            <Col className="border-bottom"><p className="h2">Choose your perfect plan</p></Col>
-                        </Row>
-                        <br></br>
-                        <Row className="second-row">
-                            <Col md="6" className="first-time-home-buyer">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>First-Time Home Buyer</CardTitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
-                                        </CardText>
-
-                                        <Button onClick={this.setRedirect}
-                                            className="btn-neutral btn-round ml-1" variant="primary">
-                                            Check Details
-                                        </Button>
-
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                            <Col md="6" className="inversment-properties">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>Investment Properties</CardTitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
-                                        </CardText>
-                                        <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <br></br>
-                        <Row className="third-row">
-                            <Col md="6" className="new-to-canada">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>New to Canada</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
-                                        </CardText>
-                                        <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                            <Col md="6" className="low-income-education-center">
-                                <Card className="shadow" style={{ width: '27.5rem' }}>
-                                    <CardImg src={pic1} />
-                                    <CardBody>
-                                        <CardTitle>Low income Education Center</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted">Card Subtitle</CardSubtitle>
-                                        <CardText>
-                                            Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.
-                                        </CardText>
-                                        <Button className="btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <br></br>
+                <div className="section">
+                    <Container>
+                        <div>
+                            <h2 className="mb-4 mb-0">A Mortgage Experience Made Better</h2>
+                            <div className="mb-4 border-bottom"></div>
+                            <section className="section section-lg py-3">
+                                <Container>
+                                    <Row className="second-row">
+                                        <Col md="6" className="first-time-home-buyer">
+                                            <Card className="shadow">
+                                                <CardImg src={mortgage1} style={{ height:"300px", width:"100%"}} />
+                                                <CardBody>
+                                                    <h5>First-Time Home Buyer</h5>
+                                                    <CardText>
+                                                        Buying your first home can be a daunting experience. It’s the most expensive purchase you’ll make in your life.
+                                                    </CardText>
+                                                    <Link to="/mortgage/first-time-home-buyer">
+                                                        <Button onClick={this.setRedirect}
+                                                            className="btn-neutral btn-round ml-1" variant="primary">
+                                                            View Details
+                                                    </Button>
+                                                    </Link>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                        <Col md="6" className="inversment-properties">
+                                            <Card className="shadow">
+                                                <CardImg src={mortgage2} style={{ height:"300px", width:"100%"}}/>
+                                                <CardBody>
+                                                    <h5>Investment Properties</h5>
+                                                    <CardText>
+                                                        You may already own a primary residence and are considering buying a home for investment purposes.
+                                                    </CardText>
+                                                    <Link to="/mortgage/investment-properties">
+                                                        <Button className="btn-neutral btn-round ml-1" variant="primary">View Details</Button>
+                                                    </Link>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                    <br></br>
+                                    <Row className="mt-5 third-row">
+                                        <Col md="6" className="new-to-canada">
+                                            <Card className="shadow">
+                                                <CardImg src={mortgage3} style={{ height:"300px", width:"100%"}}/>
+                                                <CardBody>
+                                                    <h5>New to Canada</h5>
+                                                    <CardText>
+                                                        If you’re a Canadian citizen, applying for a mortgage is a fairly simple process.
+                                                    </CardText>
+                                                    <Link to="/mortgage/new-to-Canada">
+                                                        <Button className="btn-neutral btn-round ml-1" variant="primary">View Details</Button>
+                                                    </Link>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                        <Col md="6" className="low-income-education-center">
+                                            <Card className="shadow">
+                                                <CardImg src={mortgage4} style={{ height:"300px", width:"100%"}}/>
+                                                <CardBody>
+                                                    <h5>Low Income Education Center</h5>
+                                                    <CardText>
+                                                        We work with lenders that offer excellent mortgage options for low income or self-employed Canadian.
+                                                    </CardText>
+                                                    <Link to="/mortgage/low-income-education-centre">
+                                                        <Button className="btn-neutral btn-round ml-1" variant="primary">View Details</Button>
+                                                    </Link>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </section>
+                        </div>
                     </Container>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                 </div>
             </div>
         )

@@ -25,6 +25,11 @@
                 color:#28b485;
             }
             
+            .dropdown-menu{
+                transform:none!important;
+                top:150%!important;
+            }
+            
             .caret-button{
                 display: none;
                 padding: 0;
@@ -81,9 +86,9 @@
             .dropdown-menu{
                 top: 150%;
             }
-            .aboutDropdown{
-                left:-30%;
-            }
+            // .aboutDropdown{
+            //     left:-30%;
+            // }
         }
         .flag{
             margin-right: 0;

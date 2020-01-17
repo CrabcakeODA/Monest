@@ -41,7 +41,7 @@ export default class About extends Component
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">View Details</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -54,7 +54,7 @@ export default class About extends Component
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">View Details</Button>
                                     </CardBody>
                                 </Card>
                         </Col>
@@ -70,7 +70,7 @@ export default class About extends Component
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">View Details</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -83,7 +83,7 @@ export default class About extends Component
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">View Details</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -99,7 +99,7 @@ export default class About extends Component
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">View Details</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -112,7 +112,7 @@ export default class About extends Component
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                         </CardText>
-                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">Check Details</Button>
+                                        <Button className = "btn-neutral btn-round ml-1" variant="primary">View Details</Button>
                                     </CardBody>
                                 </Card>
                             </Col>

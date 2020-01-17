@@ -25,13 +25,13 @@ export default class MortgageNews extends Component {
     render() {
         return (
             <div className="About">
-                <div className="header-and-feature">
-                    <p className="h1">MortgageNews</p>
+                <div className="titleContainer">
+                    <h1 className="title">Mortgage News</h1>
                 </div>
                 <section className="section">
                     <Container>
-                        <div className="">
-                            <h1 className="mb-4 mb-0">Monest Financial News</h1>
+                        <div>
+                            <h2 className="mb-4 mb-0">Monest Financial News</h2>
                             <div className="border-bottom"></div>
                             <p className="mt-4 mb-0">
                                 Mike XXXXX, Media Contact
@@ -40,7 +40,7 @@ export default class MortgageNews extends Component {
                                 press@canwise.com
                             </p>
 
-                            <section className="section section-lg py-5">
+                            <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="justify-content-center text-center mb-sm">
                                         <Col lg="8">
@@ -62,7 +62,7 @@ export default class MortgageNews extends Component {
                                         </Col>
                                         <Col className="pr-5 px-0 mb-5 mb-lg-0" lg="6" md="6">
                                             <div className="px-0 mb-3">
-                                            <video width="440" controls>
+                                                <video width="440" controls>
                                                     <source src="" type="video/mp4" />
                                                     <source src="" type="video/ogg" />
                                                     Your browser does not support HTML5 video.
@@ -75,7 +75,7 @@ export default class MortgageNews extends Component {
                                 </Container>
                             </section>
 
-                            <section className="section section-lg py-5">
+                            <section className="section section-lg py-3">
                                 <Container>
                                     <Row className="justify-content-center text-center mb-sm">
                                         <Col lg="8">
