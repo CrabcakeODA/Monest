@@ -13,11 +13,20 @@ import {
 import "scss/SimpleFooter.scss";
 
 class SimpleFooter extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = ({
+     
+    })
+  }
+
   render() {
     const { t } = this.props;
+
     return (
       <>
         <footer className="footer">
+        {/* <ScrollToTop /> */}
           <Container className="footerContainer">
             {/* sitmap list */}
             <Row className=" row-grid align-items-center mb-5 top">

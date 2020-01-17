@@ -1,26 +1,15 @@
-import React, {component, Component} from 'react';
-import { connect } from "react-redux";
-import classnames from "classnames";
-import pic1 from "../SCSS/pic1.png"
+import React, { Component } from 'react';
 import '../SCSS/BasicStyle.scss';
-
+import "scss/TopTitle.scss";
 import {
-    Badge,
-    Button,
     Card,
     CardBody,
-    CardImg,
-    CardSubtitle,
     CardText,
     CardTitle,
     Form,
     FormGroup,
-    FormText,
     Label,
     Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col,
@@ -33,8 +22,8 @@ import {
     render(){
         return(
             <div className = "Contact">
-                 <div className = "header-and-feature">
-                    <p className = "h1">Contact</p>
+                <div className = "titleContainer">
+                    <h1 className = "title">Contact</h1>
                 </div>
                 <div className = "main-container">
                     <Container className="container-lg">
