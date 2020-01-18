@@ -22,12 +22,12 @@
 }
 
 .application{
-    h2,
-    .lead{
+    h2{
         color: #5b5e60;
     }
     .lead{
         margin-top: 0rem;
+        color: #5b5e60;
     }
     .row-item{
         padding: 0 18%;
@@ -119,10 +119,29 @@
 }
 
 .feedback{
-    background-color: rgba(0, 51, 0, .8);
+    background-color: #f8f8f8!important;
+    h4{
+        color: #5b5e60!important;
+    }
     .title,
     .learn-more{
         color:rgba(0, 51, 0, .8);
+    }
+}
+
+.contact-us{
+    background-color: rgba(0, 51, 0, .8)!important;
+}
+.contact-us-btn,
+.contact-us-btn:hover{
+    background-color: rgba(0, 51, 0, .8);
+    color: #fff;
+    border-color: rgba(0, 51, 0, .8);
+}
+
+.our-partners{
+    h2{
+        color: #5b5e60!important;
     }
 }
 

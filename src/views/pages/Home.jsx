@@ -318,8 +318,10 @@ class Home extends React.Component {
                             Travel to meet you in person
                           </p>
                           <Link to="/about/agent">
-                          <Button className="mt-4 our-server-btn">
-                            Meet Our Team
+                            <Button
+                              className="mt-4 our-server-btn"
+                            >
+                              Meet Our Team
                           </Button>
                           </Link>
                         </CardBody>
@@ -330,7 +332,7 @@ class Home extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg customer">
+          <section className="section section-md customer">
             <Container className="pt-0">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
@@ -395,7 +397,7 @@ class Home extends React.Component {
             </Container>
           </section>
 
-          <section className="mt-5 section section-lg py-3">
+          <section className="mt-5 section section-lg py-3 our-partners">
             <Container>
               <Row className="justify-content-center text-center mb-sm">
                 <Col lg="8">
@@ -626,7 +628,7 @@ class Home extends React.Component {
             <Container>
               <Row className="row-grid">
                 <Col>
-                  <h4 className="text-center justify-content-center display-3 text-white">Feedback</h4>
+                  <h4 className="text-center justify-content-center display-3">Feedback</h4>
                   <Card className="shadow shadow-lg--hover mt-5">
                     <CardBody>
                       <Row>
@@ -747,8 +749,8 @@ class Home extends React.Component {
             </div>
           </section>
 
-          <section className="section section-lg bg-gradient-primary">
-            <Container className="pt-sm pb-300">
+          <section className="section section-md contact-us ">
+            <Container className="pb-300">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
                   <h2 className="display-3 text-white">Contact Us</h2>
@@ -782,7 +784,7 @@ class Home extends React.Component {
             </div>
           </section>
 
-          <section className="section section-lg pt-lg-0 section-contact-us">
+          <section className="section section-md pt-lg-0 section-contact-us">
             <Container>
               <Row className="justify-content-center mt--300">
                 <Col lg="8">
@@ -833,8 +835,7 @@ class Home extends React.Component {
                       <div>
                         <Button
                           block
-                          className="btn-round"
-                          color="default"
+                          className="btn-round contact-us-btn"
                           size="lg"
                           type="button"
                         >
