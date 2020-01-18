@@ -70,6 +70,7 @@
         filter:brightness(30%);
     }
 }
+
 .our-server-card{
     height: 370px!important;
     .our-server-btn,
@@ -130,8 +131,10 @@
 }
 
 .contact-us{
-    background-color: rgba(0, 51, 0, .8)!important;
+    background-image: url('https://mortgagemf.com/wp-content/uploads/2019/05/about-bg-2.jpg')!important;
+    filter:brightness(30%);
 }
+
 .contact-us-btn,
 .contact-us-btn:hover{
     background-color: rgba(0, 51, 0, .8);
