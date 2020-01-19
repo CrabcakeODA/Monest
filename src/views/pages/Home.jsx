@@ -106,7 +106,7 @@ class Home extends React.Component {
         onExited={() => this.setAnimatingStatus(false)}
         key={item.src}
       >
-        <CarsouelImg className="CarsouelImg" width='100%' height='80%' src={require(`assets/img/home/${item.altText}`)} alt={item.altText} />
+        <CarsouelImg className="CarsouelImg" src={require(`assets/img/home/${item.altText}`)} alt={item.altText} />
         <div className="carousel-caption align-items-center justify-content-center m-0 p-0 carouselText">
           <h1>{item.caption}</h1>
           <Link to={item.link}>
