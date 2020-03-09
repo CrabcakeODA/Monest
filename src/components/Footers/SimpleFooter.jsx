@@ -58,7 +58,7 @@ class SimpleFooter extends React.Component {
                   <Col md="2" className="sitemap-list">
                     <ListGroup className="about-footer footer-list">
                       <ListGroupItem className="list-title"><Link to="/about">{t('About')}</Link></ListGroupItem>
-                      <ListGroupItem><Link to="/about/referral-program">{t('Referral Program')}</Link></ListGroupItem>
+                      <ListGroupItem><Link to="/about">{t('Referral Program')}</Link></ListGroupItem>
                       <ListGroupItem><Link to="/about/mortgage-insight">{t('Mortgage Insight')}</Link></ListGroupItem>
                       <ListGroupItem><Link to="/about/mortgage-article">{t('Mortgage Article')}</Link></ListGroupItem>
                       <ListGroupItem><Link to="/about/mortgage-news">{t('Mortgage News')}</Link></ListGroupItem>
@@ -132,7 +132,7 @@ class SimpleFooter extends React.Component {
             {/* copyright */}
             <Row className=" align-items-center justify-content-md-between">
               <Col>
-                <div className=" copyright">
+                <div className=" copyright text-center">
                   © {new Date().getFullYear()}{" "}
                 Monest - maintained by Excalibur resume & culture service
                 </div>

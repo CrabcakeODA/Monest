@@ -21,8 +21,7 @@ class HeaderNavbar extends React.Component {
       dropdownOpen1: false,
       dropdownOpen2: false,
       dropdownOpen3: false,
-      isSet: true
-
+      isSet: true,
     };
     this.toggle1 = this.toggle1.bind(this);
     this.toggle2 = this.toggle2.bind(this);
@@ -70,7 +69,7 @@ class HeaderNavbar extends React.Component {
               <Navbar.Collapse data-toggler="#navbar_global" id="responsive-navbar-nav">
                 <Nav className=" menu navbar-nav-hover align-items-lg-center" navbar>
                   <div className="menu-nav">
-                    <Link to="/" className="nav-link-inner--text link-item">{t('Home')}</Link>
+                    <a href="/" className="nav-link-inner--text link-item">{t('Home')}</a>
                   </div>
 
                   {/* mortgage  */}
@@ -141,7 +140,7 @@ class HeaderNavbar extends React.Component {
 
                   {/* Contact */}
                   <div className="menu-nav">
-                    <Link to="/contact" className="nav-link-inner--text link-item">{t('Contact')}</Link>
+                    <a href="/contact" className="nav-link-inner--text link-item">{t('Contact')}</a>
                   </div> 
 
                   {/* language */}
