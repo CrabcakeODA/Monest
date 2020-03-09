@@ -83,7 +83,7 @@ class SimpleFooter extends React.Component {
                       <i className=" fa fa-instagram" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip126536702">
-                      Follow us
+                      Follow us on Instagram
                     </UncontrolledTooltip>
                     <Button
                       className=" btn-neutral btn-icon-only btn-round ml-1"
@@ -96,11 +96,11 @@ class SimpleFooter extends React.Component {
                       <i className=" fa fa-facebook-square" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip383967593">
-                      Like us
+                      Like us on Facebook
                     </UncontrolledTooltip>
                     <Button
                       className=" btn-neutral btn-icon-only btn-round ml-1 linkedin-icon"
-                      href="#"
+                      href="https://www.linkedin.com/feed/"
                       id="tooltip568564532"
                       size="lg"
                       target="_blank"
@@ -108,34 +108,7 @@ class SimpleFooter extends React.Component {
                       <i className=" fa fa-linkedin" />
                     </Button>
                     <UncontrolledTooltip delay={0} target="tooltip568564532">
-                      Follow us
-                    </UncontrolledTooltip>
-                  </div>
-                  <div className="media-part media-bottom">
-                    <Button
-                      className=" btn-neutral btn-icon-only btn-round ml-1 youtube-icon"
-                      href="#"
-                      id="tooltip626177562"
-                      size="lg"
-                      target="_blank"
-                    >
-                      <i className=" fa fa-youtube-play" />
-                    </Button>
-                    <UncontrolledTooltip delay={0} target="tooltip626177562">
-                      Follow us
-                    </UncontrolledTooltip>
-
-                    <Button
-                      className=" btn-neutral btn-icon-only btn-round ml-1 pinterest-icon"
-                      href="#"
-                      id="tooltip626177562"
-                      size="lg"
-                      target="_blank"
-                    >
-                      <i className=" fa fa-pinterest" />
-                    </Button>
-                    <UncontrolledTooltip delay={0} target="tooltip626177562">
-                      Follow us
+                      Link us on Linkedin
                     </UncontrolledTooltip>
                   </div>
                 </div>

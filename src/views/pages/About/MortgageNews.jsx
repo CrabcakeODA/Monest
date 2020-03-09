@@ -24,7 +24,7 @@ export default class MortgageNews extends Component {
                                 Mike XXXXX, Media Contact
                             </p>
                             <p className="mb-0">
-                                press@canwise.com
+                                office@monest.ca
                             </p>
 
                             <section className="section section-lg py-5">
