@@ -3,46 +3,65 @@
     height: 100%;
 
     .navContainer{
-
         .logo{
-            width: 120px;
-            height: 80px;
+            width: 80%;
+            height: 80%;
+        }
+        .navbar-collapse{
+            flex-grow: initial;
+
+            .menu{
+                width: 100%;
+
+                .menu-nav{
+                    width: 100%;
+                    padding: 10px 20px;
+        
+                    .link-item{
+                        font-size: 1rem;
+                        color: #fff;
+                    }
+        
+                    .link-item:hover{
+                        color:#28b485;
+                        // color: #fff;
+                    }
+                
+                    .dropdown-menu{
+                        transform:none!important;
+                        a:hover{
+                            background: rgb(213, 241, 213);
+                            color: #000;
+                        }
+                    }
+                    
+                    .caret-button{
+                        display: none;
+                        width: 25px;
+                        margin-left: 5px;
+                        border-radius: 5px;
+                        background-color: rgb(243, 235, 235);
+                        border: 1px solid rgb(243, 235, 235);
+                    }
+                    .dropdown-toggle::after{
+                        margin-left: 0;
+                    }
+                }
+            }
         }
 
-        .mobileLogo{
-            width: 50px;
-            height: 50px;
+        
+        .btn-secondary{
+            color: unset;
+            background-color: unset;
+            border: none;
+            box-shadow: none;
         }
-
-        .menu-nav{
-            padding: 10px 0;
-
-            .link-item{
-                padding: 20px 0;
-            }
-
-            .link-item:hover{
-                color:#28b485;
-            }
-            
-            .dropdown-menu{
-                transform:none!important;
-                top:150%!important;
-            }
-            
-            .caret-button{
-                display: none;
-                padding: 0;
-                width: 20px;
-                margin-left: 5px;
-                background-color: #fff;
-                border: none;
-                box-shadow: none;
-            }
-            .btn:focus,
-            .btn:hover{
-                box-shadow: none;
-            }
+        .btn{
+            padding: 0;
+            border-radius: 0;
+            text-transform: unset;
+            font-weight: unset;
         }
 
         .flag{
@@ -58,37 +77,47 @@
         }
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 991px){
+    .navbar-collapse{
+        position: relative!important;
+        padding: 0!important;
+    }
+    .logo{
+        width: 50%!important;
+        height: 50%!important;
+    }
     .caret-button{
         display: inline-block!important;
     }
     .link-item{
-        color: #000;
+        color: #000!important;
+    }
+    .menu-nav{
+        border:1px solid rgb(243, 235, 235);
     }
 }   
 
-@media screen and (min-width: 769px){
-    .menu{
+@media screen and (min-width: 992px){
+    .navbar-nav .nav-item {
+        margin-right: 0!important;
+    }
+    .menu-nav{
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-        float: right;
-        .menu-nav{
-            margin-right: 20px;
-            float: right;
-            .nav-item{
-                margin-right: 0!important;
+    } 
+}
+@media screen and (max-width: 425px){
+    .logo{
+        width: 35%!important;
+        height: 35%!important;
+    }
+    .menu-nav{
+        .dropdown-menu{
+            a{
+                padding: 8px 0;
+                font-size: 0.8rem;
             }
-            .link-item{
-                color: #fff;
-            }
-            .dropdown-menu{
-                top: 150%;
-            }
-        }
-        .flag{
-            margin-right: 0;
         }
     }
 }

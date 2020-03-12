@@ -43,7 +43,7 @@ export default class MortgageAffordabilityCalcultor extends React.Component {
                                                             </td>
 
                                                             <td id="annual-income-filed">
-                                                                <input className=".input-group" type="text" class="text" id="annual-income" tabindex="1"></input>
+                                                                <input className=".input-group" type="text" className="text" id="annual-income" tabindex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -84,7 +84,7 @@ export default class MortgageAffordabilityCalcultor extends React.Component {
                                                             </td>
 
                                                             <td id="co-applicant-income-filed" colSpan="1">
-                                                                <input type="text" class="text" id="co-applicant-income-filed" tabindex="1"></input>
+                                                                <input type="text" className="text" id="co-applicant-income-filed" tabindex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -150,7 +150,7 @@ export default class MortgageAffordabilityCalcultor extends React.Component {
                                                             </td>
 
                                                             <td id="credit-card-filed" colSpan="1">
-                                                                <input type="text" class="text" id="annual-income" tabindex="1"></input>
+                                                                <input type="text" className="text" id="annual-income" tabindex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -182,7 +182,7 @@ export default class MortgageAffordabilityCalcultor extends React.Component {
                                                             </td>
 
                                                             <td id="car-payment-filed" colSpan="1">
-                                                                <input type="text" class="text" id="car-payment-filed" tabindex="1"></input>
+                                                                <input type="text" className="text" id="car-payment-filed" tabindex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -210,7 +210,7 @@ export default class MortgageAffordabilityCalcultor extends React.Component {
                                                             </td>
 
                                                             <td id="other-loan-filed" colSpan="1">
-                                                                <input type="text" class="text" id="other-loan-filed" tabindex="1"></input>
+                                                                <input type="text" className="text" id="other-loan-filed" tabindex="1"></input>
                                                             </td>
 
                                                             <td>
