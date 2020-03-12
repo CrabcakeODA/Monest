@@ -46,7 +46,7 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                             </td>
 
                                                             <td id="annual-income-filed">
-                                                                <input className=".input-group" type="text" className="text" id="annual-income" tabIndex="1"></input>
+                                                                <input className=".input-group text" type="text" id="annual-income" tabIndex="1"></input>
                                                             </td>
 
                                                             <td>

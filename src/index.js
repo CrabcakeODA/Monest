@@ -19,6 +19,8 @@ import "assets/scss/argon-design-system-react.scss";
 
 import Home from "views/pages/Home.jsx";
 
+import Rates from "views/pages/Rates/Rates.jsx";
+
 import Mortgage from "views/pages/Mortgage/Mortgage.jsx"
 import FirstTimeHomeBuyer from "views/pages/Mortgage/FirstTimeHomeBuyer.jsx"
 import InvestmentProperties from "views/pages/Mortgage/InvestmentProperties.jsx"
@@ -53,6 +55,8 @@ ReactDOM.render(
         <Switch>
           {/* The component has access to the props coming through the Route. */}
           <Route path="/" exact render={props => <Home {...props} />} />
+
+          <Route path="/rates" exact render={props => <Rates {...props} />} />
 
           <Route path="/mortgage" exact render={props => <Mortgage {...props} />} />
           <Route path="/mortgage/first-time-home-buyer" exact render={props => <FirstTimeHomeBuyer {...props} />} />

@@ -95,22 +95,9 @@ class Home extends React.Component {
         }
     }
 
-  render() {
-    let slides = items.map((item) =>
-      <CarouselItem
-        onExiting={() => this.setAnimatingStatus(true)}
-        onExited={() => this.setAnimatingStatus(false)}
-        key={item.src}
-      >
-        <CarsouelImg className="CarsouelImg" src={require(`assets/img/home/${item.altText}`)} alt={item.altText} />
-        <div className="carousel-caption align-items-center justify-content-center m-0 p-0 carouselText">
-          <h1>{item.caption}</h1>
-          <Link to={item.link}>
-            <button className="btn btn-lg carsouelBtn">{item.button}</button>
-          </Link>
-        </div>
-      </CarouselItem>
-    );
+    setAnimatingStatus = (animatingStatus) => {
+        this.setState({ animating: animatingStatus })
+    }
 
     render() {
         let slides = items.map((item) =>
@@ -276,13 +263,15 @@ class Home extends React.Component {
                                                     <p className="description mt-1 mb-1">
                                                         Because the volume we get
                           </p>
-                                                    <Button
-                                                        className="mt-4 our-server-btn"
-                                                        color="primary"
-                                                        onClick={e => e.preventDefault()}
-                                                    >
-                                                        See Rate
+                                                    <Link to="/rates">
+                                                        <Button
+                                                            className="mt-4 our-server-btn"
+                                                            color="primary"
+                                                        >
+                                                            See Rate
                                                     </Button>
+                                                    </Link>
+
                                                 </CardBody>
                                             </Card>
                                         </Col>
@@ -843,9 +832,10 @@ class Home extends React.Component {
                     </section>
                 </main>
             </>
-        );
+        )
     }
 }
+
 const mapStateToProps = ({ data }) => {
     return {
         pageData: data.pageData

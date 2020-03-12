@@ -72,6 +72,10 @@ class HeaderNavbar extends React.Component {
                     <a href="/" className="nav-link-inner--text link-item">{t('Home')}</a>
                   </div>
 
+                  <div className="menu-nav">
+                    <a href="/rates" className="nav-link-inner--text link-item">{t('Rates')}</a>
+                  </div>
+
                   {/* mortgage  */}
                   <div>
                     <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>

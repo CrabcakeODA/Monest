@@ -15,7 +15,7 @@ class SimpleFooter extends React.Component {
   constructor(props) {
     super(props)
     this.state = ({
-     
+
     })
   }
 
@@ -25,7 +25,7 @@ class SimpleFooter extends React.Component {
     return (
       <>
         <footer className="footer">
-        {/* <ScrollToTop /> */}
+          {/* <ScrollToTop /> */}
           <Container className="footerContainer">
             {/* sitmap list */}
             <Row className=" row-grid align-items-center mb-5 top">
@@ -81,9 +81,6 @@ class SimpleFooter extends React.Component {
                     >
                       <i className=" fa fa-instagram" />
                     </Button>
-                    <UncontrolledTooltip delay={0} target="tooltip126536702">
-                      Follow us on Instagram
-                    </UncontrolledTooltip>
 
                     <Button
                       className=" btn-neutral btn-icon-only btn-round ml-1"
@@ -96,10 +93,6 @@ class SimpleFooter extends React.Component {
                       <i className=" fa fa-facebook-square" />
                     </Button>
 
-                    <UncontrolledTooltip delay={0} target="tooltip383967593">
-                      Like us on Facebook
-                    </UncontrolledTooltip>
-
                     <Button
                       className=" btn-neutral btn-icon-only btn-round ml-1 linkedin-icon"
                       href="https://www.linkedin.com/feed/"
@@ -110,9 +103,6 @@ class SimpleFooter extends React.Component {
                       <i className=" fa fa-linkedin" />
                     </Button>
 
-                    <UncontrolledTooltip delay={0} target="tooltip568564532">
-                      Link us on Linkedin
-                    </UncontrolledTooltip>
 
                   </div>
                 </div>
@@ -122,15 +112,15 @@ class SimpleFooter extends React.Component {
               </Col>
             </Row>
             <hr />
-            
+
             {/* copyright */}
             <Row className=" align-items-center justify-content-md-between">
               <Col>
                 <div className=" copyright text-center">
                   © {new Date().getFullYear()}{" "}
-                Monest - maintained by Excalibur resume & culture service
+                  Monest - maintained by Excalibur resume & culture service
                 </div>
-              </Col>   
+              </Col>
             </Row>
           </Container>
         </footer>
