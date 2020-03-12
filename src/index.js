@@ -19,7 +19,7 @@ import "assets/scss/argon-design-system-react.scss";
 
 import Home from "views/pages/Home.jsx";
 
-import Rates from "views/pages/Rates/Rates.jsx";
+import Rates from "views/pages/Rates/Rates";
 
 import Mortgage from "views/pages/Mortgage/Mortgage.jsx"
 import FirstTimeHomeBuyer from "views/pages/Mortgage/FirstTimeHomeBuyer.jsx"
@@ -77,13 +77,13 @@ ReactDOM.render(
           <Route path="/about/mortgage-news" exact render={props => <MortgageNews {...props} />} />
 
           <Route path="/contact" exact render={props => <Contact {...props} />} />
-          
+
           <Redirect to="/" />
         </Switch>
         <SimpleFooter />
       </ScrollToTop>
     </BrowserRouter>
-    
+
   </Provider>,
   document.getElementById("root")
 );

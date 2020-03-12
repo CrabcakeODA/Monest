@@ -12,7 +12,7 @@ import {
   Button
 } from 'reactstrap';
 import "scss/HeaderNavbar.scss";
-import { Navbar,Dropdown } from 'react-bootstrap';
+import { Navbar, Dropdown } from 'react-bootstrap';
 
 class HeaderNavbar extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class HeaderNavbar extends React.Component {
     this.toggle2 = this.toggle2.bind(this);
     this.toggle3 = this.toggle3.bind(this);
   }
-  
+
 
   toggle1() {
     this.setState({
@@ -44,7 +44,7 @@ class HeaderNavbar extends React.Component {
       dropdownOpen3: !this.state.dropdownOpen3,
     });
   }
-  
+
   handleClick(lang) {
     i18next.changeLanguage(lang);
   }
@@ -79,7 +79,7 @@ class HeaderNavbar extends React.Component {
                   {/* mortgage  */}
                   <div>
                     <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
-                      <Button id="caret" className="link-item" href="/mortgage">{t('Mortgage')}</Button>
+                      <Button id="caret" className="link-item" to="/mortgage" tag={Link}>{t('Mortgage')}</Button>
                       <DropdownToggle caret className="caret-button" />
                       <DropdownMenu>
                         <Dropdown.Item href="/mortgage/first-time-home-buyer">
@@ -97,28 +97,28 @@ class HeaderNavbar extends React.Component {
                       </DropdownMenu>
                     </ButtonDropdown>
                   </div>
-                    
-                    {/* Calculator  */}
-                   <div>
-                      <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
-                        <Button id="caret" className="link-item" href="/calculator">{t('Calculator')}</Button>
-                        <DropdownToggle caret className="caret-button" />
-                        <DropdownMenu>
-                          <Dropdown.Item href="/calculator/mortgage-affordability-calculator">
+
+                  {/* Calculator  */}
+                  <div>
+                    <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+                      <Button id="caret" className="link-item" href="/calculator">{t('Calculator')}</Button>
+                      <DropdownToggle caret className="caret-button" />
+                      <DropdownMenu>
+                        <Dropdown.Item href="/calculator/mortgage-affordability-calculator">
                           {t('Mortgage Affordability Calculator')}
-                          </Dropdown.Item>
-                          <Dropdown.Item href="/calculator/mortgage-payment-calculator">
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/calculator/mortgage-payment-calculator">
                           {t('Mortgage Payment Calculator')}
-                          </Dropdown.Item>
-                        </DropdownMenu>
-                      </ButtonDropdown>
-                    </div> 
+                        </Dropdown.Item>
+                      </DropdownMenu>
+                    </ButtonDropdown>
+                  </div>
 
                   {/* About */}
                   <div>
                     <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen3} toggle={this.toggle3}>
                       <Button id="caret" className="link-item" href="/about">{t('About')}</Button>
-                      <DropdownToggle caret className="caret-button"/>
+                      <DropdownToggle caret className="caret-button" />
                       <DropdownMenu className="aboutDropdown">
                         <Dropdown.Item href="/about/our-story">
                           {t('Our Story')}
@@ -138,14 +138,14 @@ class HeaderNavbar extends React.Component {
                         <Dropdown.Item href="/about/mortgage-news">
                           {t('Mortgage News')}
                         </Dropdown.Item>
-                        </DropdownMenu>
-                      </ButtonDropdown>
-                    </div>
+                      </DropdownMenu>
+                    </ButtonDropdown>
+                  </div>
 
                   {/* Contact */}
                   <div className="menu-nav">
                     <a href="/contact" className="nav-link-inner--text link-item">{t('Contact')}</a>
-                  </div> 
+                  </div>
 
                   {/* language */}
                   <div className="menu-nav flag">
@@ -157,9 +157,9 @@ class HeaderNavbar extends React.Component {
                 </Nav>
               </Navbar.Collapse>
             </Container>
-          </Navbar> 
+          </Navbar>
         </header>
-      </>  
+      </>
     );
   }
 }
