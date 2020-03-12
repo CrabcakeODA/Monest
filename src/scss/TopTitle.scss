@@ -18,7 +18,10 @@
 @media screen and (max-width: 768px){
     .titleContainer{
         height: 230px;
-        font-size: 1.5rem;
-        padding-bottom: 10px;
+        padding-bottom: 50px;
+
+        .title{
+            font-size: 1.5rem;
+        }
     }
 }  

@@ -9,6 +9,7 @@ import {
     Popover,
     PopoverHeader
 } from "reactstrap";
+import "scss/MortgagePaymentCalculator.scss";
 
 export default class MortgagePaymentCalculator extends React.Component {
     render() {
@@ -22,7 +23,7 @@ export default class MortgagePaymentCalculator extends React.Component {
                         <div>
                             <h2 className="mb-3 mb-0">Mortgage Payment Calcultor</h2>
                             <p>
-                                Our mortgage payment calculator allows you to enter enter the purchase price, down payment amount, amortization period and mortgage rate to determine your monthly payment and the corresponding amortization schedule. This enables you to try different down payment, mortgage rate, and amortization period scenarios to see how they will affect your monthly mortgage payment amount. Our calculator also shows you what the land transfer tax will be, and approximately how much cash you’ll need for closing costs. You can also use the calculator to estimate your total monthly expenses, see what your payments will be if mortgage rates go up, and show what your outstanding balance will be over time. 
+                                Our mortgage payment calculator allows you to enter enter the purchase price, down payment amount, amortization period and mortgage rate to determine your monthly payment and the corresponding amortization schedule. This enables you to try different down payment, mortgage rate, and amortization period scenarios to see how they will affect your monthly mortgage payment amount. Our calculator also shows you what the land transfer tax will be, and approximately how much cash you’ll need htmlFor closing costs. You can also use the calculator to estimate your total monthly expenses, see what your payments will be if mortgage rates go up, and show what your outstanding balance will be over time. 
                             </p>
                             <section className="section section-lg py-3">
                                 <Container>
@@ -39,13 +40,13 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="annual-income">Annual Income: </label>
+                                                                <label htmlFor="annual-income">Annual Income: </label>
                                                                 <br></br>
                                                                 <span className="clarification">Before Tax</span>
                                                             </td>
 
                                                             <td id="annual-income-filed">
-                                                                <input className=".input-group" type="text" class="text" id="annual-income" tabindex="1"></input>
+                                                                <input className=".input-group" type="text" className="text" id="annual-income" tabIndex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -58,10 +59,10 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                                 </Popover>
                                                             </td>
                                                             <td>
-                                                                <label for="prop_tax">Property Tax: </label>
+                                                                <label htmlFor="prop_tax">Property Tax: </label>
                                                             </td>
                                                             <td>
-                                                                <input type="text" className="text" id="prop_tax" tabindex="6"></input>
+                                                                <input type="text" className="text" id="prop_tax" tabIndex="6"></input>
                                                             </td>
                                                             <td>
                                                                 <span className="select">
@@ -80,13 +81,13 @@ export default class MortgagePaymentCalculator extends React.Component {
 
                                                         <tr>
                                                             <td>
-                                                                <label for="co-applicant-income">Co-Applicant Income: </label>
+                                                                <label htmlFor="co-applicant-income">Co-Applicant Income: </label>
                                                                 <br></br>
                                                                 <span className="clarification">Before Tax</span>
                                                             </td>
 
                                                             <td id="co-applicant-income-filed" colSpan="1">
-                                                                <input type="text" class="text" id="co-applicant-income-filed" tabindex="1"></input>
+                                                                <input type="text" className="text" id="co-applicant-income-filed" tabIndex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -99,10 +100,10 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                                 </Popover>
                                                             </td>
                                                             <td>
-                                                                <label for="condo-fees">Condo Fees: </label>
+                                                                <label htmlFor="condo-fees">Condo Fees: </label>
                                                             </td>
                                                             <td>
-                                                                <input type="text" className="text" id="condo-fees" tabindex="6"></input>
+                                                                <input type="text" className="text" id="condo-fees" tabIndex="6"></input>
                                                             </td>
                                                             <td>
                                                                 <span className="select">
@@ -123,10 +124,10 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                             <td colSpan="1"></td>
                                                             <td></td>
                                                             <td>
-                                                                <label for="heating-costs">Heating Costs: </label>
+                                                                <label htmlFor="heating-costs">Heating Costs: </label>
                                                             </td>
                                                             <td>
-                                                                <input type="text" className="text" id="heating-costs" tabindex="6"></input>
+                                                                <input type="text" className="text" id="heating-costs" tabIndex="6"></input>
                                                             </td>
                                                             <td>
                                                                 <span className="select">
@@ -147,12 +148,12 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="credit-card">Credit Card: </label>
+                                                                <label htmlFor="credit-card">Credit Card: </label>
                                                                 <br></br>
                                                             </td>
 
                                                             <td id="credit-card-filed" colSpan="1">
-                                                                <input type="text" class="text" id="annual-income" tabindex="1"></input>
+                                                                <input type="text" className="text" id="annual-income" tabIndex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -178,13 +179,13 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="car-payment">Car Payment: </label>
+                                                                <label htmlFor="car-payment">Car Payment: </label>
                                                                 <br></br>
 
                                                             </td>
 
                                                             <td id="car-payment-filed" colSpan="1">
-                                                                <input type="text" class="text" id="car-payment-filed" tabindex="1"></input>
+                                                                <input type="text" className="text" id="car-payment-filed" tabIndex="1"></input>
                                                             </td>
 
                                                             <td>
@@ -207,12 +208,12 @@ export default class MortgagePaymentCalculator extends React.Component {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="other-loan">Other Loan: </label>
+                                                                <label htmlFor="other-loan">Other Loan: </label>
                                                                 <br></br>
                                                             </td>
 
                                                             <td id="other-loan-filed" colSpan="1">
-                                                                <input type="text" class="text" id="other-loan-filed" tabindex="1"></input>
+                                                                <input type="text" className="text" id="other-loan-filed" tabIndex="1"></input>
                                                             </td>
 
                                                             <td>

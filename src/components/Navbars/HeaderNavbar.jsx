@@ -1,30 +1,49 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import i18next from 'i18next';
 import { withNamespaces } from 'react-i18next';
 import {
-  Navbar,
   Nav,
   Container,
   NavbarBrand,
-  UncontrolledCollapse,
-  Row,
-  Col,
-  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  ButtonDropdown,
+  Button
 } from 'reactstrap';
 import "scss/HeaderNavbar.scss";
+import { Navbar,Dropdown } from 'react-bootstrap';
 
 class HeaderNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      dropdownOpen1: false,
+      dropdownOpen2: false,
+      dropdownOpen3: false,
+      isSet: true,
     };
+    this.toggle1 = this.toggle1.bind(this);
+    this.toggle2 = this.toggle2.bind(this);
+    this.toggle3 = this.toggle3.bind(this);
   }
+  
 
+  toggle1() {
+    this.setState({
+      dropdownOpen1: !this.state.dropdownOpen1,
+    });
+  }
+  toggle2() {
+    this.setState({
+      dropdownOpen2: !this.state.dropdownOpen2,
+    });
+  }
+  toggle3() {
+    this.setState({
+      dropdownOpen3: !this.state.dropdownOpen3,
+    });
+  }
   
   handleClick(lang) {
     i18next.changeLanguage(lang);
@@ -34,7 +53,7 @@ class HeaderNavbar extends React.Component {
     return (
       <>
         <header className="header-global">
-          <Navbar
+          <Navbar collapseOnSelect
             className="navbar-main navbar-transparent navbar-dark headroom"
             expand="lg"
             id="navbar-main"
@@ -46,106 +65,83 @@ class HeaderNavbar extends React.Component {
                   src={require("assets/img/logo2.png")}
                 />
               </NavbarBrand>
-              {/* logo icon */}
-              <button className="navbar-toggler" id="navbar_global">
-                <span className="navbar-toggler-icon" />
-              </button>
-              <UncontrolledCollapse navbar toggler="#navbar_global">
-                <div className="navbar-collapse-header">
-                  <Row>
-                    <Col className="collapse-brand" xs="6">
-                      <Link to="/">
-                        <img className="mobileLogo"
-                          alt="Logo"
-                          src={require("assets/img/logo.png")}
-                        />
-                      </Link>
-                    </Col>
-                    <Col className="collapse-close" xs="6">
-                      <button className="navbar-toggler" id="navbar_global">
-                        <span />
-                        <span />
-                      </button>
-                    </Col>
-                  </Row>
-                </div>
-
-                
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" id="navbar_global" />
+              <Navbar.Collapse data-toggler="#navbar_global" id="responsive-navbar-nav">
                 <Nav className=" menu navbar-nav-hover align-items-lg-center" navbar>
                   <div className="menu-nav">
-                    <Link to="/" className="nav-link-inner--text link-item">{t('Home')}</Link>
+                    <a href="/" className="nav-link-inner--text link-item">{t('Home')}</a>
                   </div>
 
                   {/* mortgage  */}
-                  <div className="menu-nav">
-                    <UncontrolledDropdown nav>
-                      <Link to="/mortgage" className="nav-link-inner--text link-item">{t('Mortgage')}</Link>
-                      <DropdownToggle split id="dropdown-split-basic" className="caret-button" />
+                  <div>
+                    <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
+                      <Button id="caret" className="link-item" href="/mortgage">{t('Mortgage')}</Button>
+                      <DropdownToggle caret className="caret-button" />
                       <DropdownMenu>
-                        <DropdownItem to="/mortgage/first-time-home-buyer" tag={Link}>
-                        {t('First-Time Home Buyer')}
-                        </DropdownItem>
-                        <DropdownItem to="/mortgage/investment-properties" tag={Link}>
-                        {t('Investment Properties')}
-                        </DropdownItem>
-                        <DropdownItem to="/mortgage/new-to-Canada" tag={Link}>
-                        {t('New to Canada')}
-                        </DropdownItem>
-                        <DropdownItem to="/mortgage/low-income-education-centre" tag={Link}>
-                        {t('Low income Education Centre')}
-                        </DropdownItem>
+                        <Dropdown.Item href="/mortgage/first-time-home-buyer">
+                          {t('First-Time Home Buyer')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/mortgage/investment-properties">
+                          {t('Investment Properties')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/mortgage/new-to-Canada">
+                          {t('New to Canada')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/mortgage/low-income-education-centre">
+                          {t('Low income Education Centre')}
+                        </Dropdown.Item>
                       </DropdownMenu>
-                    </UncontrolledDropdown>
+                    </ButtonDropdown>
                   </div>
                     
                     {/* Calculator  */}
-                  <div className="menu-nav">
-                    <UncontrolledDropdown nav>
-                      <Link to="/calculator" className="nav-link-inner--text link-item">{t('Calculator')}</Link>
-                      <DropdownToggle split id="dropdown-split-basic" className="caret-button"/>
-                      <DropdownMenu>
-                        <DropdownItem to="/calculator/mortgage-affordability-calculator" tag={Link}>
-                        {t('Mortgage Affordability Calculator')}
-                        </DropdownItem>
-                        <DropdownItem to="/calculator/mortgage-payment-calculator" tag={Link}>
-                        {t('Mortgage Payment Calculator')}
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </div>
+                   <div>
+                      <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+                        <Button id="caret" className="link-item" href="/calculator">{t('Calculator')}</Button>
+                        <DropdownToggle caret className="caret-button" />
+                        <DropdownMenu>
+                          <Dropdown.Item href="/calculator/mortgage-affordability-calculator">
+                          {t('Mortgage Affordability Calculator')}
+                          </Dropdown.Item>
+                          <Dropdown.Item href="/calculator/mortgage-payment-calculator">
+                          {t('Mortgage Payment Calculator')}
+                          </Dropdown.Item>
+                        </DropdownMenu>
+                      </ButtonDropdown>
+                    </div> 
 
                   {/* About */}
-                  <div className="menu-nav">
-                    <UncontrolledDropdown nav>
-                    <Link to="/about" className="nav-link-inner--text link-item">{t('About')}</Link>
-                    <DropdownToggle split id="dropdown-split-basic" className="caret-button"/>
-                    <DropdownMenu className="aboutDropdown">
-                      <DropdownItem to="/about/our-story" tag={Link}>
-                        {t('Our Story')}
-                      </DropdownItem>
-                      <DropdownItem to="/about/agent" tag={Link}>
-                        {t('Agents')}
-                      </DropdownItem>
-                      <DropdownItem to="/about/referral-program" tag={Link}>
-                        {t('Referral Program')}
-                      </DropdownItem>
-                      <DropdownItem to="/about/mortgage-insight" tag={Link}>
-                        {t('Mortgage Insight')}
-                      </DropdownItem>
-                      <DropdownItem to="/about/mortgage-article" tag={Link}>
-                        {t('Mortgage Article')}
-                      </DropdownItem>
-                      <DropdownItem to="/about/mortgage-news" tag={Link}>
-                        {t('Mortgage News')}
-                      </DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </div>
+                  <div>
+                    <ButtonDropdown className="dropdown menu-nav" nav isOpen={this.state.dropdownOpen3} toggle={this.toggle3}>
+                      <Button id="caret" className="link-item" href="/about">{t('About')}</Button>
+                      <DropdownToggle caret className="caret-button"/>
+                      <DropdownMenu className="aboutDropdown">
+                        <Dropdown.Item href="/about/our-story">
+                          {t('Our Story')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/about/agent">
+                          {t('Agents')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/about/referral-program">
+                          {t('Referral Program')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/about/mortgage-insight">
+                          {t('Mortgage Insight')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/about/mortgage-article">
+                          {t('Mortgage Article')}
+                        </Dropdown.Item>
+                        <Dropdown.Item href="/about/mortgage-news">
+                          {t('Mortgage News')}
+                        </Dropdown.Item>
+                        </DropdownMenu>
+                      </ButtonDropdown>
+                    </div>
 
                   {/* Contact */}
                   <div className="menu-nav">
-                    <Link to="/contact" className="nav-link-inner--text link-item">{t('Contact')}</Link>
-                  </div>
+                    <a href="/contact" className="nav-link-inner--text link-item">{t('Contact')}</a>
+                  </div> 
 
                   {/* language */}
                   <div className="menu-nav flag">
@@ -155,7 +151,7 @@ class HeaderNavbar extends React.Component {
                     <img className="zh-flag" onClick={() => this.handleClick('zh')} alt="English" src={require("assets/img/flag/chinese.png")} />
                   </div>
                 </Nav>
-              </UncontrolledCollapse>
+              </Navbar.Collapse>
             </Container>
           </Navbar> 
         </header>
@@ -163,5 +159,4 @@ class HeaderNavbar extends React.Component {
     );
   }
 }
-
 export default withNamespaces()(HeaderNavbar);

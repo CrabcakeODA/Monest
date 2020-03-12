@@ -9,6 +9,7 @@ import ScrollToTop from 'react-router-scroll-top'
 import './i18n';
 
 import HeaderNavbar from "components/Navbars/HeaderNavbar.jsx";
+// import HeaderNavbar from "components/Navbars/HeaderNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.jsx";
 import ScrollToTopButton from "views/ScrollToTop.js";
 
