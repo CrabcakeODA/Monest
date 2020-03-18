@@ -159,7 +159,7 @@ class Home extends React.Component {
                                         <h2 className="display-3">Start an application</h2>
                                         <p className="lead text-muted">
                                             lowest rate and the most professional service served by Monest
-                    </p>
+                                        </p>
                                     </Col>
                                 </Row>
                                 <Row className="row-item">
@@ -213,10 +213,10 @@ class Home extends React.Component {
                                             </h1>
                                             <h4 className="text-white mb-1">
                                                 YOU WORTH MORE THAN YOU THOUGHT
-                      </h4>
+                                            </h4>
                                             <h4 className="text-white mb-5 mt-1">
                                                 WE OFFER YOU BEST RATE & BEST SERVICE
-                      </h4>
+                                            </h4>
                                         </Col>
                                     </Row>
                                 </div>
@@ -673,11 +673,11 @@ class Home extends React.Component {
                                                         <div className="pl-4">
                                                             <h5 className="title">
                                                                 Private mortgage lender, avoiding for paying high penalty.
-                              </h5>
+                                                            </h5>
                                                             <p>
                                                                 The mortgage agent from other company have been slow to progress, which has caused me to miss the closing time, As a result of that, I am paying very high penalty every day.
-                                  Monest quickly gave private loan for me, then I can close my the deal. I really hope that I was cooperate with Monest from the beginning, so I would not waste time and money.
-                      </p>
+                                                                Monest quickly gave private loan for me, then I can close my the deal. I really hope that I was cooperate with Monest from the beginning, so I would not waste time and money.
+                                                            </p>
                                                         </div>
                                                     </Col>
                                                 </div>

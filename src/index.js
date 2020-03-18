@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
@@ -48,7 +48,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop>
         <HeaderNavbar />
         <ScrollToTopButton />
@@ -82,7 +82,7 @@ ReactDOM.render(
         </Switch>
         <SimpleFooter />
       </ScrollToTop>
-    </BrowserRouter>
+    </HashRouter>
 
   </Provider>,
   document.getElementById("root")
